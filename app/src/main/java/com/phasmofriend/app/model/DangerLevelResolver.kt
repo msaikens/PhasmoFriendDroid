@@ -18,6 +18,7 @@ object DangerLevelResolver {
 
             // 🟠 Moderate danger ghosts
             R.string.ghost_poltergeist_name,
+            R.string.ghost_obambo_name,
             R.string.ghost_banshee_name,
             R.string.ghost_jinn_name,
             R.string.ghost_yokai_name,

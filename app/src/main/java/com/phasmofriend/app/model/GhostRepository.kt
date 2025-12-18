@@ -354,6 +354,49 @@ object GhostRepository {
             descriptionResId = R.string.ghost_thaye_desc,
             dangerLevel = DangerLevel.MEDIUM
         ),
+        Ghost(
+            nameResId = R.string.ghost_obambo_name,
+            evidences = setOf(
+                Evidence.GHOST_WRITING,
+                Evidence.SPIRIT_BOX,
+                Evidence.DOTS
+            ),
+            possibleBehaviors = setOf(
+                BehaviorTag.CALM_THEN_AGGRESSIVE_CYCLES,
+            ),
+            descriptionResId = R.string.ghost_obambo_desc,
+            dangerLevel = DangerLevel.MEDIUM
+        ),
+        Ghost(
+            nameResId = R.string.ghost_dayan_name,
+            evidences = setOf(
+                Evidence.EMF5,
+                Evidence.GHOST_ORB,
+                Evidence.SPIRIT_BOX
+            ),
+            possibleBehaviors = setOf(
+                BehaviorTag.MOVES_FASTER_WHEN_PLAYER_MOVES_NEARBY,
+                BehaviorTag.LINE_OF_SIGHT_SPEED_UP
+            ),
+            descriptionResId = R.string.ghost_dayan_desc,
+            dangerLevel = DangerLevel.HIGH
+        ),
+
+        Ghost(
+            nameResId = R.string.ghost_gallu_name,
+            evidences = setOf(
+                Evidence.SPIRIT_BOX,
+                Evidence.EMF5,
+                Evidence.UV
+            ),
+            possibleBehaviors = setOf(
+                BehaviorTag.HUNTS_LESS_AGGRESSIVE_AS_SANITY_DROPS,
+                BehaviorTag.PROTECTIVE_EQUIPMENT_BETTER_AS_GHOST_WEAKENS,
+                BehaviorTag.SELECTIVELY_STEPS_IN_SALT
+            ),
+            descriptionResId = R.string.ghost_gallu_desc,
+            dangerLevel = DangerLevel.HIGH
+        ),
 
         // The Mimic – special case with extra fake Orbs
         Ghost(

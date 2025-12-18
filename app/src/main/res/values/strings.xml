@@ -93,7 +93,7 @@
     <string name="ghost_poltergeist_name">Poltergeist</string>
     <string name="ghost_poltergeist_desc"> Throws many objects, often in bursts that can cause significant sanity loss. </string>
     <string name="ghost_banshee_name">Banshee</string>
-    <string name="ghost_banshee_desc"> Targets one player at a time and has unique parabolic microphone and audio recorder screaming. </string>
+    <string name="ghost_banshee_desc"> Targets one player at a time and has unique parabolic microphone and audio recorder screaming. The banshee is ALWAYS a female.</string>
     <string name="ghost_jinn_name">Jinn</string>
     <string name="ghost_jinn_desc"> Moves faster with line of sight while the power is on and can drop sanity with its ability. </string>
     <string name="ghost_mare_name">Mare</string>
@@ -169,8 +169,19 @@
 </string>
     <string name="back_to_results">Back to results</string>
     <string name="reset_to_default">Reset to default</string>
-    <string name="search_behaviors">Search for a behavior ...</string>
+    <string name="search_behaviors">Search for a behavior …</string>
     <string name="evidence">Evidence: %1$s</string>
-    <string name="behavior_handprint_has_six_fingers">UV fingerprint has six fingers, not the standard five.</string>
+    <string name="behavior_handprint_has_six_fingers">UV fingerprint sometimes has six fingers, not the standard five.</string>
+    <string name="ghost_obambo_name">Obambo</string>
+    <string name="ghost_obambo_desc">A ghost that alternates between \"aggressive\" and \"calm\" hunting states.</string>
+    <string name="behavior_calm_aggressive_alternating">Slower speed hunt after little ghost activity. Quicker speed hunt after more ghost activity</string>
+    <string name="MOVEMENT_SPEED_CHANGES_WHEN_PLAYER_MOVES">The ghost hunts faster if you move within 10 meters of it. Hunts slower if you are still within 10 meters.</string>
+    <string name="ghost_dayan_name">Dayan</string>
+    <string name="ghost_dayan_desc">A ghost that suffered cruelty. It speeds up when players move nearby, and slows down when players are not moving nearby.</string>
+    <string name="PROTECTIVE_EQUIPMENT_ENRAGES">Aggressive ghost that becomes faster when protective equipment like a crucifix or incense is used.</string>
+    <string name="SELECTIVE_SALT_DISTURBANCE">Ghost is able to walk over salt without disturbing it, but other times does disturb it.</string>
+    <string name="WEAKER_MORE_IMPACTED_BY_PROTECTIVE">Ghost is impacted more by protective equipment as it weakens</string>
+    <string name="ghost_gallu_desc">A ghost that starts enraged but becomes less aggressive as sanity drops from 60 down to 40.</string>
+    <string name="ghost_gallu_name">Gallu</string>
 
 </resources>
