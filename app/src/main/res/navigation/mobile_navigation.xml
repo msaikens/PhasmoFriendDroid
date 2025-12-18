@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_evidence">
+
+    <fragment
+        android:id="@+id/navigation_evidence"
+        android:name="com.phasmofriend.app.ui.home.EvidenceFragment"
+        android:label="title_evidence"
+        tools:layout="@layout/fragment_evidence" />
+
+    <fragment
+        android:id="@+id/navigation_behavior"
+        android:name="com.phasmofriend.app.ui.notifications.BehaviorFragment"
+        android:label="title_behavior"
+        tools:layout="@layout/fragment_behavior" />
+
+    <fragment
+        android:id="@+id/navigation_results"
+        android:name="com.phasmofriend.app.ui.dashboard.ResultsFragment"
+        android:label="title_results"
+        tools:layout="@layout/fragment_results">
+
+        <action
+            android:id="@+id/action_navigation_results_to_ghostDetailFragment"
+            app:destination="@id/ghostDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ghostDetailFragment"
+        android:name="com.phasmofriend.app.ui.dashboard.GhostDetailFragment"
+        android:label="title_ghost_detail"
+        tools:layout="@layout/fragment_ghost_detail" />
+</navigation>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/evidence_row"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp">
+
+    <ImageView
+        android:id="@+id/evidence_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerInside"
+        android:contentDescription="@string/evidence_icon_content_desc" />
+
+    <CheckBox
+        android:id="@+id/evidence_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:buttonTint="@color/phasmo_accent"
+        android:textColor="@color/phasmo_teal"
+        android:saveEnabled="false"/>
+
+    <TextView
+        android:id="@+id/evidence_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/phasmo_text_primary"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:ellipsize="end" />
+
+</LinearLayout>

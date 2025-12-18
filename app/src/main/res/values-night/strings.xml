@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="behavior_handprint_has_six_fingers">UV fingerprint has six fingers, not the standard five.</string>
+</resources>

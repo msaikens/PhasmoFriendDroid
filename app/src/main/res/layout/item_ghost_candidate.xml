@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardGhost"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="2dp"
+    app:strokeColor="@android:color/transparent"
+    app:rippleColor="?attr/colorControlHighlight"
+    android:backgroundTint="@color/phasmo_card">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <!-- Ghost name -->
+        <TextView
+            android:id="@+id/ghost_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textColor="@color/phasmo_text_primary"
+            android:textStyle="bold"
+            tools:text="Banshee" />
+
+        <!-- Short description / danger summary -->
+        <TextView
+            android:id="@+id/ghost_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/phasmo_text_secondary"
+            tools:text="Hunts early, can target a single player" />
+
+        <!-- Evidence icons row -->
+        <LinearLayout
+            android:id="@+id/evidence_icon_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/ghost_evidence_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+            android:textColor="@color/phasmo_text_secondary"
+            tools:text="Evidence: EMF5 • Spirit Box • Ghost Writing" />
+        <!-- Danger chip -->
+        <TextView
+            android:id="@+id/ghost_danger_chip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@android:color/white"
+            android:background="@drawable/phasmo_danger_chip_background"
+            tools:text="High danger" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

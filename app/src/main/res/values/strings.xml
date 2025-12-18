@@ -1,0 +1,176 @@
+<resources>
+    <string name="app_name">Phasmo Friend</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!--  Dashboard / results  -->
+    <plurals name="candidate_count">
+        <item quantity="zero">No possible ghosts</item>
+        <item quantity="one">1 possible ghost</item>
+        <item quantity="other">%d possible ghosts</item>
+    </plurals>
+    <string name="danger_low">Low</string>
+    <string name="danger_medium">Moderate</string>
+    <string name="danger_high">High</string>
+    <string name="evidence_subtitle_hint">Select all evidence you\'ve found so far.</string>
+    <string name="results_hint"> Adjust evidence and behavior to refine the list. </string>
+    <string name="danger_level_label">Danger level (customizable)</string>
+    <string name="danger_level_low">Low</string>
+    <string name="danger_level_medium">Medium</string>
+    <string name="danger_level_high">High</string>
+    <string name="danger_level_reset">Reset to default</string>
+    <!--  Ghost list row  -->
+    <string name="ghost_score_format"> Score: %1$d (evidence %2$d, behavior %3$d) </string>
+    <string name="label_evidence">Evidence: %1$s</string>
+    <string name="label_extra_with_value">Extra: %1$s</string>
+    <string name="label_extra_none">Extra: —</string>
+    <string name="label_behavior_with_value">Behavior: %1$s</string>
+    <string name="label_behavior_none">Behavior: —</string>
+    <string name="label_extra_and_behavior">%1$s | %2$s</string>
+    <!--  Ghost detail screen title  -->
+    <string name="title_ghost_detail">Ghost Details</string>
+    <!--  Dashboard / results  -->
+    <string name="dashboard_subtitle">Ghost candidates based on your evidence</string>
+    <string name="candidates_header">Candidates</string>
+    <string name="candidate_count_initial">—</string>
+    <!--  Ghost list row  -->
+    <string name="ghost_name_placeholder">Ghost Name</string>
+    <string name="ghost_score_placeholder">Score: 0 (evidence 0, behavior 0)</string>
+    <string name="ghost_evidence_placeholder">Evidence: –</string>
+    <string name="ghost_behavior_placeholder">Extra: – | Behavior: –</string>
+    <!--  Evidence screen  -->
+    <string name="evidence_screen_title">Evidence Selection</string>
+    <string name="evidence_screen_subtitle"> Mark what evidence you have and what it cannot be. </string>
+    <string name="evidence_has_header">HAS Evidence</string>
+    <string name="evidence_cannot_header">CANNOT Be Evidence</string>
+    <string name="evidence_emf5">EMF Level 5</string>
+    <string name="evidence_spirit_box">Spirit Box</string>
+    <string name="evidence_ghost_orbs">Ghost Orbs</string>
+    <string name="evidence_ghost_writing">Ghost Writing</string>
+    <string name="evidence_fingerprints">UV</string>
+    <string name="evidence_freezing_temps">Freezing Temps</string>
+    <string name="evidence_dots">D.O.T.S Projector</string>
+    <string name="detail_evidence_header">Evidence</string>
+    <string name="detail_behavior_header">Behavior / Traits</string>
+    <!--  Behavior screen  -->
+    <string name="behavior_screen_title">Behavior &amp; Hunt Clues</string>
+    <string name="behavior_screen_subtitle"> Mark behaviors you\'ve observed during the investigation. </string>
+    <!--  BehaviorTag labels  -->
+    <string name="behavior_activity_in_multiple_places_at_once"> Activity occurs in two or more places at the same time. </string>
+    <string name="behavior_avoids_salt"> Avoids stepping in salt and never leaves salt footprints. </string>
+    <string name="behavior_calm_when_player_in_room"> Less active when players are inside its ghost room. </string>
+    <string name="behavior_cannot_hide_from_ghost"> The ghost always knows the player’s location; cannot be hidden from. </string>
+    <string name="behavior_cannot_mist_form"> Does not produce ghost mist events. </string>
+    <string name="behavior_dots_only_visible_through_camera"> DOTS ghost movements are visible on camera only. </string>
+    <string name="behavior_early_hunter"> Able to hunt at higher-than-normal sanity levels. </string>
+    <string name="behavior_extinguished_flame_causes_hunt"> Extinguishing flames increases chance of an immediate hunt. </string>
+    <string name="behavior_fast_blink"> Blinks very quickly during hunts. </string>
+    <string name="behavior_fast_hunt"> Moves significantly faster than normal during hunts. </string>
+    <string name="behavior_faster_near_electronics"> Increases speed when near active electronics. </string>
+    <string name="behavior_hard_to_hear_hunting"> Hunt footsteps or vocals are unusually quiet or muffled. </string>
+    <string name="behavior_hunt_movement_speed_decreases_over_time"> Slows down compared to each previous hunt. </string>
+    <string name="behavior_hunts_when_you_talk"> More likely to hunt when players speak nearby. </string>
+    <string name="behavior_late_hunter"> Prefers to hunt only at very low sanity. </string>
+    <string name="behavior_line_of_sight_speed_up"> Speeds up when maintaining line of sight with a player. </string>
+    <string name="behavior_roamer"> Frequently roams away from its ghost room. </string>
+    <string name="behavior_sanity_drain_strong"> Causes above-average sanity drain during interactions. </string>
+    <string name="behavior_sanity_drain_weak"> Causes below-average sanity drain. </string>
+    <string name="behavior_screams_in_audio_or_parabolic"> Produces a distinctive scream on audio or parabolic microphone. </string>
+    <string name="behavior_shapeshifter"> Alters appearance; may blink a different form while hunting. </string>
+    <string name="behavior_shy"> Reduces interactions or manifestations when players are nearby. </string>
+    <string name="behavior_slow_blink"> Blinks slowly or less frequently during hunts. Hard to see. </string>
+    <string name="behavior_slow_hunt"> Moves noticeably slower than normal during hunts. </string>
+    <string name="behavior_slow_when_hidden_fast_when_visible"> Slow when the player is hidden, fast when it has visual contact. </string>
+    <string name="behavior_slows_down_as_it_approaches_player"> Speed decreases as it closes distance to the player. </string>
+    <string name="behavior_throws_piles_or_multiple_at_once"> Throws multiple objects rapidly or throws piles of items. </string>
+    <string name="behavior_visible_breath"> Visible breath from the ghost. </string>
+    <!--  Ghost Names & Descriptions  -->
+    <string name="ghost_spirit_desc"> Baseline ghost with no major strengths. Smudge sticks block hunts longer than usual. </string>
+    <string name="ghost_wraith_name">Wraith</string>
+    <string name="ghost_wraith_desc"> Does not leave footprints in salt and tends to roam directly toward players. </string>
+    <string name="ghost_phantom_name">Phantom</string>
+    <string name="ghost_phantom_desc"> Drains extra sanity during events and can disappear instantly when photographed. </string>
+    <string name="ghost_poltergeist_name">Poltergeist</string>
+    <string name="ghost_poltergeist_desc"> Throws many objects, often in bursts that can cause significant sanity loss. </string>
+    <string name="ghost_banshee_name">Banshee</string>
+    <string name="ghost_banshee_desc"> Targets one player at a time and has unique parabolic microphone and audio recorder screaming. </string>
+    <string name="ghost_jinn_name">Jinn</string>
+    <string name="ghost_jinn_desc"> Moves faster with line of sight while the power is on and can drop sanity with its ability. </string>
+    <string name="ghost_mare_name">Mare</string>
+    <string name="ghost_mare_desc"> Prefers darkness; more likely to hunt in the dark and frequently turns lights off. </string>
+    <string name="ghost_revenant_name">Revenant</string>
+    <string name="ghost_revenant_desc"> Extremely slow without line of sight but incredibly fast once it sees a player. </string>
+    <string name="ghost_shade_name">Shade</string>
+    <string name="ghost_shade_desc"> Very shy; produces fewer events and hunts when players are nearby. </string>
+    <string name="ghost_demon_name">Demon</string>
+    <string name="ghost_demon_desc"> Can hunt at much higher sanity and has a shorter smudge cooldown. </string>
+    <string name="ghost_yurei_name">Yurei</string>
+    <string name="ghost_yurei_desc"> Causes strong sanity drain and has a unique door-closing ability in its favorite room. </string>
+    <string name="ghost_oni_name">Oni</string>
+    <string name="ghost_oni_desc"> Very active and visible; more events and unable to perform mist form events. </string>
+    <string name="ghost_hantu_name">Hantu</string>
+    <string name="ghost_hantu_desc"> Speed depends on temperature — fast in cold areas, slow in warm ones. </string>
+    <string name="ghost_yokai_name">Yokai</string>
+    <string name="ghost_yokai_desc"> Triggered by player talking; can hunt at higher sanity if players speak nearby. </string>
+    <string name="ghost_myling_name">Myling</string>
+    <string name="ghost_myling_desc"> Footsteps are quieter at distance; more active on the parabolic microphone. </string>
+    <string name="ghost_onryo_name">Onryo</string>
+    <string name="ghost_onryo_desc"> Candle-based hunter; treats fire "like a crucifix" and frequently extinguishes flames to trigger hunts. </string>
+    <string name="ghost_twins_name">The Twins</string>
+    <string name="ghost_twins_desc"> Can interact in two locations at once; hunts have varying speeds between the main and decoy twin. </string>
+    <string name="ghost_raiju_name">Raiju</string>
+    <string name="ghost_raiju_desc"> Becomes extremely fast near active electronics, making it dangerous in cluttered environments. </string>
+    <string name="ghost_obake_name">Obake</string>
+    <string name="ghost_obake_desc"> Can leave unique UV fingerprints and has a chance for prints to fade faster than normal. Unique ability to shapeshift while hunting. </string>
+    <string name="ghost_goryo_name">Goryo</string>
+    <string name="ghost_goryo_desc"> D.O.T.S. ghost is visible only through cameras and usually only when players are not in the room. </string>
+    <string name="ghost_moroi_name">Moroi</string>
+    <string name="ghost_moroi_desc"> Curses players after Spirit Box or Parabolic responses; becomes faster at lower sanity. </string>
+    <string name="ghost_deogen_name">Deogen</string>
+    <string name="ghost_deogen_desc"> Always knows your location; extremely slow when close but fast when far away. Players cannot hide from the ghost. </string>
+    <string name="ghost_thaye_name">Thaye</string>
+    <string name="ghost_thaye_desc"> Starts strong and fast but ages over time, becoming weaker and slower as the investigation progresses. </string>
+    <string name="ghost_mimic_name">The Mimic</string>
+    <string name="ghost_mimic_desc"> Mimics other ghosts’ behaviors and always displays Ghost Orbs as a deceptive fourth evidence. </string>
+    <string name="ghost_row_evidence_format">Evidence: %1$s</string>
+    <string name="ghost_row_behavior_format">Behavior: %1$s</string>
+    <string name="ghost_row_no_known_behavior">Behavior: (no distinctive behavior)</string>
+    <!--  Ghost detail screen  -->
+    <string name="ghost_detail_back_to_results">Back to ghost results</string>
+    <string name="ghost_detail_evidence_placeholder">Evidence: –</string>
+    <string name="ghost_detail_extra_placeholder">Extra Evidence: –</string>
+    <string name="ghost_detail_behavior_placeholder">Behavior tags: –</string>
+    <string name="ghost_detail_description_placeholder"> Long description will appear here. </string>
+    <string name="ghost_detail_missing_data_fallback"> Ghost details could not be loaded. </string>
+    <!--  res/values/strings1.xml  -->
+    <string name="behavior_search_hint">Search behaviors…</string>
+    <string name="navigation_evidence">Evidence</string>
+    <string name="navigation_ghost_behavior">Ghost Behavior</string>
+    <string name="title_evidence">Evidence</string>
+    <string name="title_behavior">Ghost Behavior\n</string>
+    <string name="title_results">Ghost Results</string>
+    <string name="ghost_spirit_name">Spirit</string>
+    <string name="ghostname_arg_ghostdetailfragment_onviewcreated">ghostName</string>
+    <string name="title_clear_all">Clear All</string>
+    <string name="clear_all_yes">Yes</string>
+    <string name="clear_all_no">No</string>
+    <string name="clear_all_message">Are you sure you want to clear all selections?</string>
+    <string name="evidence_icon_cd">Evidence icon</string>
+    <string name="evidence_checkbox_container">evidence checkbox container</string>
+    <string name="evidence_icon_desc">evidence icon</string>
+    <string name="danger_level_prefix">danger_level_</string>
+    <string name="danger_settings">danger_settings</string>
+    <string name="evidence_icon_content_desc">Evidence icon</string>
+
+    <string name="results_title">Ghost candidates</string>
+
+    <string name="behavior_subtitle_hint">
+    Check all behaviors you are observing in this contract.
+</string>
+    <string name="back_to_results">Back to results</string>
+    <string name="reset_to_default">Reset to default</string>
+    <string name="search_behaviors">Search for a behavior ...</string>
+    <string name="evidence">Evidence: %1$s</string>
+    <string name="behavior_handprint_has_six_fingers">UV fingerprint has six fingers, not the standard five.</string>
+
+</resources>

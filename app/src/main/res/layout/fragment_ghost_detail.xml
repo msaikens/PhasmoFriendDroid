@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/phasmo_background"
+    android:padding="16dp"
+    tools:context=".ui.dashboard.GhostDetailFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/phasmo_surface"
+        app:cardCornerRadius="12dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- 👻 Ghost name -->
+            <TextView
+                android:id="@+id/text_ghost_detail_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/phasmo_text_primary"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                tools:text="Banshee" />
+
+            <!-- Evidence summary -->
+            <TextView
+                android:id="@+id/text_ghost_detail_evidence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/phasmo_text_secondary"
+                android:layout_marginBottom="4dp"
+                tools:text="Evidence: EMF 5 / Spirit Box / D.O.T.S" />
+
+            <!-- Behaviors summary -->
+            <TextView
+                android:id="@+id/text_ghost_detail_behaviors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/phasmo_text_secondary"
+                android:layout_marginBottom="12dp"
+                tools:text="Behaviors: Roams often • Likes singing events" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/text_ghost_detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                android:textColor="@color/phasmo_text_primary"
+                android:layout_marginBottom="16dp"
+                tools:text="This ghost is known for hunting a single target and screaming in your ear at the worst possible time." />
+
+            <!-- Divider -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#33FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- ⚠️ Danger level section -->
+            <TextView
+                android:id="@+id/text_ghost_detail_danger_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/danger_level_label"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textColor="@color/phasmo_text_primary"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/group_danger_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
+
+                <RadioButton
+                    android:id="@+id/radio_danger_low"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/danger_low"
+                    android:textColor="@color/phasmo_text_primary" />
+
+                <RadioButton
+                    android:id="@+id/radio_danger_medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/danger_medium"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/phasmo_text_primary" />
+
+                <RadioButton
+                    android:id="@+id/radio_danger_high"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/danger_high"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/phasmo_text_primary" />
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_reset_danger"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_to_default"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Divider before navigation button -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#33FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- ⬅ Back to results -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_back_results"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/back_to_results"
+                app:strokeColor="@color/phasmo_accent"
+                app:iconPadding="8dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</ScrollView>

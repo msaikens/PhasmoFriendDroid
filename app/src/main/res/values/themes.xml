@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--   MAIN APPLICATION THEME                       -->
+    <!-- ─────────────────────────────────────────────── -->
+
+    <style name="Theme.PhasmoFriend" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Core background & surfaces -->
+        <item name="android:colorBackground">@color/phasmo_background</item>
+        <item name="colorSurface">@color/phasmo_surface</item>
+        <item name="colorOnSurface">@color/phasmo_text_primary</item>
+
+        <!-- Primary branding -->
+        <item name="colorPrimary">@color/phasmo_purple</item>
+        <item name="colorPrimaryVariant">@color/phasmo_purple_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Secondary branding -->
+        <item name="colorSecondary">@color/phasmo_teal</item>
+        <item name="colorSecondaryVariant">@color/phasmo_teal_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status & navigation bars -->
+        <item name="android:statusBarColor">@color/phasmo_status_bar</item>
+        <item name="android:navigationBarColor">@color/phasmo_nav_bar</item>
+
+        <!-- Typography / Text -->
+        <item name="android:textColorPrimary">@color/phasmo_text_primary</item>
+        <item name="android:textColorSecondary">@color/phasmo_text_secondary</item>
+
+        <!-- Ripple -->
+        <item name="colorControlHighlight">@color/phasmo_ripple</item>
+
+        <!-- Chip / Button styling -->
+        <item name="chipIconTint">@color/phasmo_nav_selected</item>
+        <item name="chipBackgroundColor">@color/phasmo_surface_high</item>
+        <item name="chipStrokeColor">@color/phasmo_outline</item>
+        <item name="chipStrokeWidth">1dp</item>
+
+        <!-- Bottom navigation colors -->
+        <item name="bottomNavigationStyle">@style/Phasmo.BottomNavigation</item>
+
+        <!-- General card default styling -->
+        <item name="cardViewStyle">@style/Phasmo.CardView</item>
+
+        <!-- Elevation tweaks -->
+        <item name="android:shadowColor">@color/black</item>
+        <item name="android:shadowRadius">4</item>
+
+    </style>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--   SPLASH SCREEN THEME                          -->
+    <!-- ─────────────────────────────────────────────── -->
+
+    <style name="Theme.PhasmoFriend.Splash" parent="Theme.SplashScreen">
+        <!-- Background of splash screen -->
+        <item name="windowSplashScreenBackground">@color/black</item>
+
+        <!-- Use your launcher icon -->
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
+
+        <!-- Base duration; exit animation handled in MainActivity -->
+        <item name="windowSplashScreenAnimationDuration">300</item>
+
+        <!-- Transition to this theme -->
+        <item name="postSplashScreenTheme">@style/Theme.PhasmoFriend</item>
+    </style>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--   NAVIGATION BAR STYLE                         -->
+    <!-- ─────────────────────────────────────────────── -->
+
+    <style name="Phasmo.BottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="itemIconTint">@color/phasmo_nav_selector_icon</item>
+        <item name="itemTextColor">@color/phasmo_nav_selector_text</item>
+        <item name="android:background">@color/phasmo_surface</item>
+        <item name="elevation">8dp</item>
+    </style>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--   CARD STYLE                                   -->
+    <!-- ─────────────────────────────────────────────── -->
+
+    <style name="Phasmo.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/phasmo_surface_high</item>
+        <item name="cardElevation">6dp</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="android:foreground">@drawable/ph_as_ripple</item>
+    </style>
+
+</resources>

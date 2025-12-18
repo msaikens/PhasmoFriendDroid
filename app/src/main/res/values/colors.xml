@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--  Brand Colors -->
+    <!-- ─────────────────────────────────────────────── -->
+
+    <color name="phasmo_purple">#7A5FFF</color>
+    <color name="phasmo_purple_dark">#5A3FE0</color>
+
+    <color name="phasmo_teal">#03DAC5</color>
+    <color name="phasmo_teal_dark">#018786</color>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--  App Background / Surfaces -->
+    <!-- ─────────────────────────────────────────────── -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <!-- Main 100% background, soft near-black -->
+    <color name="phasmo_background">#121212</color>
+
+    <!-- Slightly lighter card/background surface -->
+    <color name="phasmo_surface">#1E1E1E</color>
+
+    <!-- Elevated surfaces (like Material 3) -->
+    <color name="phasmo_surface_high">#272727</color>
+
+    <!-- Outlines around cards, chips, dividers -->
+    <color name="phasmo_outline">#2F2F2F</color>
+
+    <!-- Text colors high contrast on dark -->
+    <color name="phasmo_text_primary">#FFFFFF</color>
+    <color name="phasmo_text_secondary">#CCFFFFFF</color>
+    <color name="phasmo_text_disabled">#80FFFFFF</color>
+
+    <!-- Ripple color over dark surfaces -->
+    <color name="phasmo_ripple">#33FFFFFF</color>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--  System Bars / Navigation / Status Bar -->
+    <!-- ─────────────────────────────────────────────── -->
+
+    <color name="phasmo_status_bar">#000000</color>
+    <color name="phasmo_nav_bar">#000000</color>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--  Danger Level Colors (Ghost result borders) -->
+    <!-- ─────────────────────────────────────────────── -->
+    <color name="phasmo_card">#22252A</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="phasmo_accent">#BB86FC</color>
+
+    <!-- Safe → Green -->
+    <color name="danger_low">#4CAF50</color>
+    <color name="danger_low_bg">#4CAF50</color>
+    <!-- Moderate → Yellow / Amber -->
+    <color name="danger_medium">#FFC107</color>
+    <color name="danger_medium_bg">#FFC107</color>
+    <!-- Dangerous → Red -->
+    <color name="danger_high">#FF5252</color>
+    <color name="danger_high_bg">#FF5252</color>
+
+    <!-- Border faint glow versions -->
+    <color name="danger_low_glow">#804CAF50</color>
+    <color name="danger_medium_glow">#80FFC107</color>
+    <color name="danger_high_glow">#80FF5252</color>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--  Navigation Bar Icon/Text Selectors -->
+    <!-- ─────────────────────────────────────────────── -->
+
+    <!-- Selected nav item color -->
+    <color name="phasmo_nav_selected">#FFFFFF</color>
+
+    <!-- Unselected nav item color -->
+    <color name="phasmo_nav_unselected">#80FFFFFF</color>
+
+    <!-- These were required for your theme selectors -->
+    <color name="phasmo_nav_selector_icon">@color/phasmo_nav_selected</color>
+    <color name="phasmo_nav_selector_text">@color/phasmo_nav_unselected</color>
+
+    <!-- ─────────────────────────────────────────────── -->
+    <!--  Launcher Icon Background -->
+    <!-- ─────────────────────────────────────────────── -->
+
+    <color name="ic_launcher_background">#000000</color>
+
+</resources>
