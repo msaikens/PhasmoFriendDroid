@@ -1,0 +1,264 @@
+<resources>
+
+    <!-- ========================================================= -->
+    <!-- App -->
+    <!-- ========================================================= -->
+    <string name="app_name">Phasmo Friend</string>
+
+    <!-- ========================================================= -->
+    <!-- Navigation / Tabs -->
+    <!-- ========================================================= -->
+    <string name="navigation_evidence">Beweise</string>
+    <string name="navigation_ghost_behavior">Geisterverhalten</string>
+
+    <string name="title_home">Start</string>
+    <string name="title_dashboard">Übersicht</string>
+    <string name="title_notifications">Benachrichtigungen</string>
+    <string name="title_evidence">Beweise</string>
+    <string name="title_behavior">Geisterverhalten</string>
+    <string name="title_results">Geisterergebnisse</string>
+    <string name="title_ghost_detail">Geisterdetails</string>
+
+    <!-- ========================================================= -->
+    <!-- Dashboard / Results -->
+    <!-- ========================================================= -->
+    <string name="results_title">Mögliche Geister</string>
+    <string name="results_hint">Passe Beweise und Verhalten an, um die Liste einzugrenzen.</string>
+    <string name="dashboard_subtitle">Geister basierend auf deinen Beweisen</string>
+    <string name="candidates_header">Kandidaten</string>
+
+    <plurals name="candidate_count">
+        <item quantity="zero">Keine möglichen Geister</item>
+        <item quantity="one">1 möglicher Geist</item>
+        <item quantity="other">%d mögliche Geister</item>
+    </plurals>
+
+    <!-- ========================================================= -->
+    <!-- Danger Levels -->
+    <!-- ========================================================= -->
+    <string name="danger_low">Niedrig</string>
+    <string name="danger_medium">Mittel</string>
+    <string name="danger_high">Hoch</string>
+
+    <string name="danger_level_label">Gefahrenstufe (anpassbar)</string>
+    <string name="danger_level_low">Niedrig</string>
+    <string name="danger_level_medium">Mittel</string>
+    <string name="danger_level_high">Hoch</string>
+    <string name="danger_level_reset">Auf Standard zurücksetzen</string>
+
+    <!-- ========================================================= -->
+    <!-- Evidence Screen -->
+    <!-- ========================================================= -->
+    <string name="evidence_screen_title">Beweisauswahl</string>
+    <string name="evidence_screen_subtitle">Markiere gefundene Beweise und ausgeschlossene Möglichkeiten.</string>
+    <string name="evidence_subtitle_hint">Wähle alle Beweise aus, die du bisher gefunden hast.</string>
+
+    <string name="evidence_has_header">HAT Beweise</string>
+    <string name="evidence_cannot_header">KANN NICHT sein</string>
+
+    <string name="evidence_emf5">EMF Stufe 5</string>
+    <string name="evidence_spirit_box">Spirit Box</string>
+    <string name="evidence_ghost_orbs">Geisterorbs</string>
+    <string name="evidence_ghost_writing">Geisterschrift</string>
+    <string name="evidence_fingerprints">UV</string>
+    <string name="evidence_freezing_temps">Gefriertemperaturen</string>
+    <string name="evidence_dots">D.O.T.S.-Projektor</string>
+
+    <string name="detail_evidence_header">Beweise</string>
+    <string name="detail_behavior_header">Verhalten / Eigenschaften</string>
+
+    <!-- Accessibility -->
+    <string name="evidence_icon_cd">Beweissymbol</string>
+    <string name="evidence_icon_desc">Beweissymbol</string>
+    <string name="evidence_icon_content_desc">Beweissymbol</string>
+    <string name="evidence_checkbox_container">Beweis-Auswahlcontainer</string>
+
+    <!-- ========================================================= -->
+    <!-- Behavior Screen -->
+    <!-- ========================================================= -->
+    <string name="behavior_screen_title">Verhalten und Jagdhinweise</string>
+    <string name="behavior_screen_subtitle">Markiere beobachtete Verhaltensweisen während der Untersuchung.</string>
+    <string name="behavior_subtitle_hint">Wähle alle Verhaltensweisen aus, die du in diesem Auftrag beobachtest.</string>
+
+    <string name="behavior_search_hint">Verhalten suchen…</string>
+    <string name="search_behaviors">Nach Verhalten suchen …</string>
+
+    <!-- ========================================================= -->
+    <!-- Behavior Tags -->
+    <!-- ========================================================= -->
+    <string name="behavior_activity_in_multiple_places_at_once">Aktivität findet gleichzeitig an mehreren Orten statt.</string>
+    <string name="behavior_avoids_salt">Meidet Salz und hinterlässt keine Fußspuren.</string>
+    <string name="behavior_calm_when_player_in_room">Weniger aktiv, wenn Spieler im Geisterraum sind.</string>
+    <string name="behavior_cannot_hide_from_ghost">Der Geist kennt immer deine Position; Verstecken ist unmöglich.</string>
+    <string name="behavior_cannot_mist_form">Erzeugt keine Nebelerscheinungen.</string>
+    <string name="behavior_dots_only_visible_through_camera">D.O.T.S.-Bewegungen sind nur durch Kameras sichtbar.</string>
+    <string name="behavior_early_hunter">Kann bei höherem Verstand jagen als üblich.</string>
+    <string name="behavior_extinguished_flame_causes_hunt">Das Löschen von Flammen erhöht die Jagdwahrscheinlichkeit.</string>
+    <string name="behavior_fast_blink">Blinkt während der Jagd sehr schnell.</string>
+    <string name="behavior_fast_hunt">Bewegt sich während der Jagd deutlich schneller als normal.</string>
+    <string name="behavior_faster_near_electronics">Wird schneller in der Nähe aktiver Elektronik.</string>
+    <string name="behavior_hard_to_hear_hunting">Jagdfußschritte oder Geräusche sind ungewöhnlich leise.</string>
+    <string name="behavior_hunt_movement_speed_decreases_over_time">Wird mit jeder Jagd langsamer.</string>
+    <string name="behavior_hunts_when_you_talk">Jagt häufiger, wenn Spieler sprechen.</string>
+    <string name="behavior_late_hunter">Jagt bevorzugt erst bei sehr niedrigem Verstand.</string>
+    <string name="behavior_line_of_sight_speed_up">Beschleunigt bei direkter Sichtlinie.</string>
+    <string name="behavior_roamer">Entfernt sich häufig vom Geisterraum.</string>
+    <string name="behavior_sanity_drain_strong">Verursacht überdurchschnittlichen Verstandsverlust.</string>
+    <string name="behavior_sanity_drain_weak">Verursacht unterdurchschnittlichen Verstandsverlust.</string>
+    <string name="behavior_screams_in_audio_or_parabolic">Erzeugt einen charakteristischen Schrei auf Audio-/Parabolmikrofon.</string>
+    <string name="behavior_shapeshifter">Verändert sein Aussehen während der Jagd.</string>
+    <string name="behavior_shy">Zeigt weniger Aktivität, wenn Spieler in der Nähe sind.</string>
+    <string name="behavior_slow_blink">Blinkt langsam oder selten während der Jagd.</string>
+    <string name="behavior_slow_hunt">Bewegt sich während der Jagd langsamer als normal.</string>
+    <string name="behavior_slow_when_hidden_fast_when_visible">Langsam bei versteckten Spielern, schnell bei Sichtkontakt.</string>
+    <string name="behavior_slows_down_as_it_approaches_player">Wird langsamer, je näher er dem Spieler kommt.</string>
+    <string name="behavior_throws_piles_or_multiple_at_once">Wirft mehrere Gegenstände schnell hintereinander.</string>
+    <string name="behavior_visible_breath">Sichtbarer Atem des Geistes.</string>
+
+    <!-- Custom -->
+    <string name="behavior_handprint_has_six_fingers">UV-Fingerabdruck hat manchmal sechs Finger.</string>
+    <string name="MOVEMENT_SPEED_CHANGES_WHEN_PLAYER_MOVES">Der Geist wird schneller, wenn du dich bewegst, langsamer wenn du stillstehst.</string>
+    <string name="PROTECTIVE_EQUIPMENT_ENRAGES">Wird aggressiver, wenn Schutzgegenstände benutzt werden.</string>
+    <string name="SELECTIVE_SALT_DISTURBANCE">Ignoriert Salz gelegentlich und löst es später aus.</string>
+    <string name="WEAKER_MORE_IMPACTED_BY_PROTECTIVE">Wird stärker durch Schutzmittel beeinflusst, wenn er schwächer wird.</string>
+
+    <!-- ========================================================= -->
+    <!-- Ghost Row -->
+    <!-- ========================================================= -->
+    <string name="ghost_score_format">Wertung: %1$d (Beweise %2$d, Verhalten %3$d)</string>
+    <string name="ghost_row_evidence_format">Beweise: %1$s</string>
+    <string name="ghost_row_behavior_format">Verhalten: %1$s</string>
+    <string name="ghost_row_no_known_behavior">Verhalten: (keine Besonderheiten)</string>
+
+    <string name="label_evidence">Beweise: %1$s</string>
+    <string name="label_extra_with_value">Extra: %1$s</string>
+    <string name="label_extra_none">Extra: —</string>
+    <string name="label_behavior_with_value">Verhalten: %1$s</string>
+    <string name="label_behavior_none">Verhalten: —</string>
+    <string name="label_extra_and_behavior">%1$s | %2$s</string>
+
+    <!-- ========================================================= -->
+    <!-- Ghost Detail -->
+    <!-- ========================================================= -->
+    <string name="ghost_detail_back_to_results">Zurück zu den Ergebnissen</string>
+    <string name="ghost_detail_evidence_placeholder">Beweise: –</string>
+    <string name="ghost_detail_extra_placeholder">Zusätzliche Beweise: –</string>
+    <string name="ghost_detail_behavior_placeholder">Verhaltensmerkmale: –</string>
+    <string name="ghost_detail_description_placeholder">Eine ausführliche Beschreibung erscheint hier.</string>
+    <string name="ghost_detail_missing_data_fallback">Geisterdetails konnten nicht geladen werden.</string>
+    <!-- Ghost Names & Descriptions -->
+    <string name="ghost_spirit_name">Spirit</string>
+    <string name="ghost_spirit_desc">Grundlegender Geist ohne besondere Stärken.</string>
+
+    <string name="ghost_wraith_name">Wraith</string>
+    <string name="ghost_wraith_desc">Hinterlässt keine Fußspuren im Salz und wandert auf Spieler zu.</string>
+
+    <string name="ghost_phantom_name">Phantom</string>
+    <string name="ghost_phantom_desc">Entzieht zusätzliche geistige Gesundheit und verschwindet bei Fotos.</string>
+
+    <string name="ghost_poltergeist_name">Poltergeist</string>
+    <string name="ghost_poltergeist_desc">Wirft viele Objekte in schnellen Abfolgen.</string>
+
+    <string name="ghost_banshee_name">Banshee</string>
+    <string name="ghost_banshee_desc">Zielt auf einen Spieler und erzeugt einen einzigartigen Schrei.</string>
+
+    <string name="ghost_jinn_name">Jinn</string>
+    <string name="ghost_jinn_desc">Bewegt sich schneller bei eingeschaltetem Strom und Sichtkontakt.</string>
+
+    <string name="ghost_mare_name">Mare</string>
+    <string name="ghost_mare_desc">Bevorzugt Dunkelheit und schaltet Lichter aus.</string>
+
+    <string name="ghost_revenant_name">Revenant</string>
+    <string name="ghost_revenant_desc">Sehr langsam ohne Sichtkontakt, extrem schnell mit Sichtkontakt.</string>
+
+    <string name="ghost_shade_name">Shade</string>
+    <string name="ghost_shade_desc">Sehr scheu und weniger aktiv in der Nähe von Spielern.</string>
+
+    <string name="ghost_demon_name">Demon</string>
+    <string name="ghost_demon_desc">Jagt bei höherer geistiger Gesundheit; Räucherstäbchen wirken kürzer.</string>
+
+    <string name="ghost_yurei_name">Yurei</string>
+    <string name="ghost_yurei_desc">Starker Sanitätsverlust und Fähigkeit, Türen zu schließen.</string>
+
+    <string name="ghost_oni_name">Oni</string>
+    <string name="ghost_oni_desc">Sehr aktiv und gut sichtbar.</string>
+
+    <string name="ghost_hantu_name">Hantu</string>
+    <string name="ghost_hantu_desc">Geschwindigkeit hängt von der Temperatur ab.</string>
+
+    <string name="ghost_yokai_name">Yokai</string>
+    <string name="ghost_yokai_desc">Wird durch Sprechen ausgelöst.</string>
+
+    <string name="ghost_myling_name">Myling</string>
+    <string name="ghost_myling_desc">Leise Schritte; aktiv am Parabolmikrofon.</string>
+
+    <string name="ghost_onryo_name">Onryo</string>
+    <string name="ghost_onryo_desc">Jäger, der auf Kerzen basiert.</string>
+
+    <string name="ghost_twins_name">Die Zwillinge</string>
+    <string name="ghost_twins_desc">Interagiert an zwei Orten gleichzeitig.</string>
+
+    <string name="ghost_raiju_name">Raiju</string>
+    <string name="ghost_raiju_desc">Sehr schnell in der Nähe von Elektronik.</string>
+
+    <string name="ghost_obake_name">Obake</string>
+    <string name="ghost_obake_desc">Einzigartige UV-Abdrücke und Gestaltwandel.</string>
+
+    <string name="ghost_goryo_name">Goryo</string>
+    <string name="ghost_goryo_desc">DOTS nur über Kameras sichtbar.</string>
+
+    <string name="ghost_moroi_name">Moroi</string>
+    <string name="ghost_moroi_desc">Verflucht Spieler und wird bei niedriger Sanität schneller.</string>
+
+    <string name="ghost_deogen_name">Deogen</string>
+    <string name="ghost_deogen_desc">Kennt immer deinen Standort.</string>
+
+    <string name="ghost_thaye_name">Thaye</string>
+    <string name="ghost_thaye_desc">Altert und wird mit der Zeit schwächer.</string>
+
+    <string name="ghost_mimic_name">Der Mimic</string>
+    <string name="ghost_mimic_desc">Imitiert andere Geister und zeigt falsche Orbs.</string>
+
+    <!-- Clear All -->
+    <string name="title_clear_all">Alles zurücksetzen</string>
+    <string name="clear_all_message">Möchtest du wirklich alle Auswahlmöglichkeiten löschen?</string>
+    <string name="clear_all_yes">Ja</string>
+    <string name="clear_all_no">Nein</string>
+
+    <!-- ========================================================= -->
+    <!-- Persistence -->
+    <!-- ========================================================= -->
+    <string name="danger_settings">danger_settings</string>
+    <string name="danger_level_prefix">danger_level_</string>
+
+    <!-- ========================================================= -->
+    <!-- Sanity Thresholds -->
+    <!-- ========================================================= -->
+    <string name="sanity_80">Jagt bei 80 % Verstand oder weniger</string>
+    <string name="sanity_75">Jagt bei 75 % Verstand oder weniger</string>
+    <string name="sanity_70">Jagt bei 70 % Verstand oder weniger</string>
+    <string name="sanity_65">Jagt bei 65 % Verstand oder weniger</string>
+    <string name="sanity_60">Jagt bei 60 % Verstand oder weniger</string>
+    <string name="sanity_55">Jagt bei 55 % Verstand oder weniger</string>
+    <string name="sanity_50">Jagt bei 50 % Verstand oder weniger</string>
+    <string name="sanity_45">Jagt bei 45 % Verstand oder weniger</string>
+    <string name="sanity_40">Jagt bei 40 % Verstand oder weniger</string>
+    <string name="sanity_35">Jagt bei 35 % Verstand oder weniger</string>
+    <string name="sanity_30">Jagt bei 30 % Verstand oder weniger</string>
+    <string name="sanity_25">Jagt bei 25 % Verstand oder weniger</string>
+    <string name="sanity_20">Jagt bei 20 % Verstand oder weniger</string>
+    <string name="sanity_15">Jagt bei 15 % Verstand oder weniger</string>
+    <string name="sanity_10">Jagt bei 10 % Verstand oder weniger</string>
+    <string name="sanity_5">Jagt bei 5 % Verstand oder weniger</string>
+    <string name="sanity_0">Jagt bei 0 % Verstand</string>
+    <string name="reset_to_default">Reset to default</string>
+    <string name="back_to_results">Back to results</string>
+    <string name="behavior_calm_aggressive_alternating">Hunts alternate between fast and slow depending on aggression.</string>
+    <string name="ghost_obambo_name">Obambo</string>
+    <string name="ghost_dayan_desc">A tortured ghost. Moving while near the ghost makes it speed up. Standing still near the ghost slows the ghost down.</string>
+    <string name="ghost_gallu_name">Gallu</string>
+    <string name="ghost_gallu_desc">A ghost that starts out enraged but becomes less aggressive as sanity drops.</string>
+    <string name="ghost_dayan_name">Dayan</string>
+    <string name="ghost_obambo_desc">A ghost that alternates between aggressive and calm states. Switches states every 2 minutes. For the first minutes after opening an exit door, it is calm.</string>
+
+</resources>

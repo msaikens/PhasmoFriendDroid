@@ -7,8 +7,12 @@ import com.phasmofriend.app.model.BehaviorTag
 import com.phasmofriend.app.model.Evidence
 import com.phasmofriend.app.model.Ghost
 import com.phasmofriend.app.model.GhostRepository
+import com.phasmofriend.app.model.EvidenceState
 
 class InvestigationViewModel : ViewModel() {
+    private val _evidenceStates = MutableLiveData<Map<Evidence, EvidenceState>>(emptyMap())
+
+    val evidenceStates: LiveData<Map<Evidence, EvidenceState>> = _evidenceStates
 
     private val _selectedEvidence = MutableLiveData<Set<Evidence>>(emptySet())
     val selectedEvidence: LiveData<Set<Evidence>> = _selectedEvidence
@@ -18,6 +22,49 @@ class InvestigationViewModel : ViewModel() {
 
     private val _candidates = MutableLiveData(GhostRepository.ghosts)
     val candidates: LiveData<List<Ghost>> = _candidates
+
+    fun getEvidenceState(evidence: Evidence): EvidenceState {
+        return _evidenceStates.value?.get(evidence) ?: EvidenceState.OFF
+    }
+    // Has the user marked an evidence as HAS, or NOT HAS? Is it unmarked?
+    fun setEvidenceState(evidence: Evidence, state: EvidenceState) {
+        val current = _evidenceStates.value.orEmpty().toMutableMap()
+        if (state == EvidenceState.OFF)
+        {
+            current.remove(evidence)
+        }
+        else
+        {
+            current[evidence] = state
+        }
+        _evidenceStates.value = current
+    }
+    // Toggle states. HAS -> NOT HAS -> OFF
+    // i.e. HAS UV -> NO US -> OFF
+    fun toggleHas(evidence: Evidence)
+    {
+        val next = when (getEvidenceState(evidence)) {
+            EvidenceState.OFF -> EvidenceState.HAS
+            EvidenceState.HAS -> EvidenceState.NOT
+            EvidenceState.NOT -> EvidenceState.OFF
+        }
+        setEvidenceState(evidence, next)
+    }
+
+    fun toggleNot(evidence: Evidence)
+    {
+        val next = when (getEvidenceState(evidence)) {
+            EvidenceState.OFF -> EvidenceState.NOT
+            EvidenceState.HAS -> EvidenceState.OFF
+            EvidenceState.NOT -> EvidenceState.OFF
+        }
+        setEvidenceState(evidence, next)
+    }
+
+    fun clearAllStates()
+    {
+        _evidenceStates.value = emptyMap()
+    }
 
     fun setEvidenceChecked(evidence: Evidence, isChecked: Boolean) {
         val current = _selectedEvidence.value.orEmpty().toMutableSet()

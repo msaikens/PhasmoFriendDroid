@@ -12,7 +12,10 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.phasmofriend.app.R
+import com.phasmofriend.app.model.Evidence
+import com.phasmofriend.app.model.EvidenceState
 import com.phasmofriend.app.model.Ghost
+import com.phasmofriend.app.model.GhostRepository
 import com.phasmofriend.app.ui.shared.InvestigationViewModel
 
 class ResultsFragment : Fragment() {
@@ -20,7 +23,6 @@ class ResultsFragment : Fragment() {
     private lateinit var resultsList: RecyclerView
     private lateinit var adapter: GhostCandidateAdapter
 
-    // 🔗 Shared VM with Evidence/Behavior fragments & MainActivity
     private val investigationViewModel: InvestigationViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -34,6 +36,7 @@ class ResultsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // ✅ FIXED ID (matches fragment_results.xml)
         resultsList = view.findViewById(R.id.results_list)
 
         adapter = GhostCandidateAdapter { ghost ->
@@ -43,20 +46,29 @@ class ResultsFragment : Fragment() {
         resultsList.layoutManager = LinearLayoutManager(requireContext())
         resultsList.adapter = adapter
 
-        //
-        // 🧠 Plug into real investigation data
-        // Assumes your VM exposes LiveData<List<Ghost>> named `candidateGhosts`
-        //
-        investigationViewModel.candidates.observe(viewLifecycleOwner) { ghosts ->
-            adapter.submitList(ghosts)
+        // ✅ Always recompute from source list when evidence state changes
+        investigationViewModel.evidenceStates.observe(viewLifecycleOwner) { evidenceStates ->
+            val base = GhostRepository.ghosts
+            val filtered = filterByEvidenceTriState(base, evidenceStates)
+            adapter.submitList(filtered)
         }
 
-        // 👉 If your VM uses a different API (e.g. a function),
-        // you can change the above block to:
-        //
-        // val ghosts = investigationViewModel.getCandidateGhosts()
-        // adapter.submitList(ghosts)
-        //
+        // ✅ initial load (in case evidenceStates already has a value)
+        val initialStates = investigationViewModel.evidenceStates.value.orEmpty()
+        adapter.submitList(filterByEvidenceTriState(GhostRepository.ghosts, initialStates))
+    }
+
+    private fun filterByEvidenceTriState(
+        ghosts: List<Ghost>,
+        evidenceStates: Map<Evidence, EvidenceState>
+    ): List<Ghost> {
+        val required = evidenceStates.filterValues { it == EvidenceState.HAS }.keys
+        val excluded = evidenceStates.filterValues { it == EvidenceState.NOT }.keys
+
+        return ghosts.filter { ghost ->
+            val ev = ghost.evidences.toSet()
+            required.all { it in ev } && excluded.none { it in ev }
+        }
     }
 
     private fun navigateToGhostDetail(ghost: Ghost) {

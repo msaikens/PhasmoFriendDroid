@@ -13,8 +13,8 @@ android {
         applicationId = "com.phasmofriend.app"
         minSdk = 30
         targetSdk = 36
-        versionCode = 2
-        versionName = "1.1.1-alpha"
+        versionCode = 4
+        versionName = "Banshee Version"
 
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

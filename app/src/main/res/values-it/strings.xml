@@ -1,0 +1,258 @@
+<resources>
+
+    <!-- ========================================================= -->
+    <!-- App -->
+    <!-- ========================================================= -->
+    <string name="app_name">Phasmo Friend</string>
+
+    <!-- ========================================================= -->
+    <!-- Navigation / Tabs -->
+    <!-- ========================================================= -->
+    <string name="navigation_evidence">Prove</string>
+    <string name="navigation_ghost_behavior">Comportamento del fantasma</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifiche</string>
+    <string name="title_evidence">Prove</string>
+    <string name="title_behavior">Comportamento</string>
+    <string name="title_results">Risultati</string>
+    <string name="title_ghost_detail">Dettagli del fantasma</string>
+
+    <!-- ========================================================= -->
+    <!-- Dashboard / Results -->
+    <!-- ========================================================= -->
+    <string name="results_title">Fantasmi possibili</string>
+    <string name="results_hint">Modifica prove e comportamenti per affinare la lista.</string>
+    <string name="dashboard_subtitle">Fantasmi in base alle tue prove</string>
+    <string name="candidates_header">Candidati</string>
+    <plurals name="candidate_count">
+        <item quantity="zero">Nessun fantasma possibile</item>
+        <item quantity="one">1 fantasma possibile</item>
+        <item quantity="other">%d fantasmi possibili</item>
+    </plurals>
+
+    <!-- ========================================================= -->
+    <!-- Danger Levels -->
+    <!-- ========================================================= -->
+    <string name="danger_low">Basso</string>
+    <string name="danger_medium">Medio</string>
+    <string name="danger_high">Alto</string>
+
+    <string name="danger_level_label">Livello di pericolo (personalizzabile)</string>
+    <string name="danger_level_low">Basso</string>
+    <string name="danger_level_medium">Medio</string>
+    <string name="danger_level_high">Alto</string>
+    <string name="danger_level_reset">Ripristina predefinito</string>
+
+    <!-- ========================================================= -->
+    <!-- Evidence Screen -->
+    <!-- ========================================================= -->
+    <string name="evidence_screen_title">Selezione delle prove</string>
+    <string name="evidence_screen_subtitle">Segna le prove trovate e quelle escluse.</string>
+    <string name="evidence_subtitle_hint">Seleziona tutte le prove trovate finora.</string>
+
+    <string name="evidence_has_header">HA prove</string>
+    <string name="evidence_cannot_header">NON PUÒ essere</string>
+
+    <string name="evidence_emf5">EMF livello 5</string>
+    <string name="evidence_spirit_box">Spirit Box</string>
+    <string name="evidence_ghost_orbs">Sfere fantasma</string>
+    <string name="evidence_ghost_writing">Scrittura fantasma</string>
+    <string name="evidence_fingerprints">UV</string>
+    <string name="evidence_freezing_temps">Temperature gelide</string>
+    <string name="evidence_dots">Proiettore D.O.T.S.</string>
+
+    <string name="detail_evidence_header">Prove</string>
+    <string name="detail_behavior_header">Comportamento / Tratti</string>
+
+    <!-- Accessibility -->
+    <string name="evidence_icon_cd">Icona della prova</string>
+    <string name="evidence_icon_desc">Icona della prova</string>
+    <string name="evidence_icon_content_desc">Icona della prova</string>
+    <string name="evidence_checkbox_container">Contenitore selezione prove</string>
+
+    <!-- ========================================================= -->
+    <!-- Behavior Screen -->
+    <!-- ========================================================= -->
+    <string name="behavior_screen_title">Comportamento e indizi di caccia</string>
+    <string name="behavior_screen_subtitle">Segna i comportamenti osservati durante l’indagine.</string>
+    <string name="behavior_subtitle_hint">Seleziona tutti i comportamenti osservati in questo contratto.</string>
+
+    <string name="behavior_search_hint">Cerca comportamento…</string>
+    <string name="search_behaviors">Cerca comportamento …</string>
+
+    <!-- ========================================================= -->
+    <!-- Behavior Tags -->
+    <!-- ========================================================= -->
+    <string name="behavior_activity_in_multiple_places_at_once">Attività in più luoghi contemporaneamente.</string>
+    <string name="behavior_avoids_salt">Evita il sale e non lascia impronte.</string>
+    <string name="behavior_calm_when_player_in_room">Meno attivo quando i giocatori sono nella stanza.</string>
+    <string name="behavior_cannot_hide_from_ghost">Il fantasma conosce sempre la tua posizione.</string>
+    <string name="behavior_cannot_mist_form">Non produce apparizioni di nebbia.</string>
+    <string name="behavior_dots_only_visible_through_camera">I movimenti D.O.T.S. sono visibili solo tramite telecamera.</string>
+    <string name="behavior_early_hunter">Può cacciare con sanità mentale elevata.</string>
+    <string name="behavior_extinguished_flame_causes_hunt">Spegnere una fiamma aumenta la probabilità di caccia.</string>
+    <string name="behavior_fast_blink">Lampeggia molto velocemente durante la caccia.</string>
+    <string name="behavior_fast_hunt">Si muove molto più velocemente durante la caccia.</string>
+    <string name="behavior_faster_near_electronics">Accelera vicino a dispositivi elettronici attivi.</string>
+    <string name="behavior_hard_to_hear_hunting">I suoni della caccia sono difficili da sentire.</string>
+    <string name="behavior_hunt_movement_speed_decreases_over_time">Diventa più lento a ogni caccia.</string>
+    <string name="behavior_hunts_when_you_talk">Caccia più spesso quando i giocatori parlano.</string>
+    <string name="behavior_late_hunter">Preferisce cacciare con sanità mentale molto bassa.</string>
+    <string name="behavior_line_of_sight_speed_up">Accelera con linea di vista diretta.</string>
+    <string name="behavior_roamer">Si allontana spesso dalla sua stanza.</string>
+    <string name="behavior_sanity_drain_strong">Consumo di sanità mentale superiore alla norma.</string>
+    <string name="behavior_sanity_drain_weak">Consumo di sanità mentale inferiore alla norma.</string>
+    <string name="behavior_screams_in_audio_or_parabolic">Produce un urlo distintivo su microfono audio o parabolico.</string>
+    <string name="behavior_shapeshifter">Cambia aspetto durante la caccia.</string>
+    <string name="behavior_shy">Meno attivo quando i giocatori sono vicini.</string>
+    <string name="behavior_slow_blink">Lampeggia lentamente o raramente.</string>
+    <string name="behavior_slow_hunt">Si muove lentamente durante la caccia.</string>
+    <string name="behavior_slow_when_hidden_fast_when_visible">Lento quando nascosto, veloce quando visibile.</string>
+    <string name="behavior_slows_down_as_it_approaches_player">Rallenta avvicinandosi al giocatore.</string>
+    <string name="behavior_throws_piles_or_multiple_at_once">Lancia più oggetti rapidamente.</string>
+    <string name="behavior_visible_breath">Respiro del fantasma visibile.</string>
+
+    <!-- ========================================================= -->
+    <!-- Ghost Detail -->
+    <!-- ========================================================= -->
+    <string name="ghost_detail_back_to_results">Torna ai risultati</string>
+    <string name="ghost_detail_missing_data_fallback">Impossibile caricare i dettagli del fantasma.</string>
+    <!-- Custom / Extended Behavior -->
+    <string name="behavior_handprint_has_six_fingers">L’impronta UV a volte mostra sei dita invece di cinque.</string>
+    <string name="MOVEMENT_SPEED_CHANGES_WHEN_PLAYER_MOVES">Il fantasma caccia più velocemente se ti muovi entro 10 metri e più lentamente se resti fermo.</string>
+    <string name="PROTECTIVE_EQUIPMENT_ENRAGES">Diventa più veloce quando viene usata attrezzatura protettiva.</string>
+    <string name="SELECTIVE_SALT_DISTURBANCE">Può camminare sul sale senza disturbarlo e poi disturbarlo in seguito.</string>
+    <string name="WEAKER_MORE_IMPACTED_BY_PROTECTIVE">È più influenzato dall’attrezzatura protettiva man mano che si indebolisce.</string>
+
+    <!-- Ghost Row / Formatting -->
+    <string name="ghost_score_format">Punteggio: %1$d (prove %2$d, comportamento %3$d)</string>
+    <string name="ghost_row_evidence_format">Prove: %1$s</string>
+    <string name="ghost_row_behavior_format">Comportamento: %1$s</string>
+    <string name="ghost_row_no_known_behavior">Comportamento: (nessun comportamento distintivo)</string>
+
+    <string name="label_evidence">Prove: %1$s</string>
+    <string name="label_extra_with_value">Extra: %1$s</string>
+    <string name="label_extra_none">Extra: —</string>
+    <string name="label_behavior_with_value">Comportamento: %1$s</string>
+    <string name="label_behavior_none">Comportamento: —</string>
+    <string name="label_extra_and_behavior">%1$s | %2$s</string>
+
+    <!-- Ghost Detail -->
+    <string name="ghost_detail_evidence_placeholder">Prove: –</string>
+    <string name="ghost_detail_extra_placeholder">Prove extra: –</string>
+    <string name="ghost_detail_behavior_placeholder">Tratti comportamentali: –</string>
+    <string name="ghost_detail_description_placeholder">La descrizione dettagliata apparirà qui.</string>
+
+    <!-- Ghost Names & Descriptions -->
+    <string name="ghost_spirit_name">Spirit</string>
+    <string name="ghost_spirit_desc">Fantasma base senza punti di forza principali.</string>
+
+    <string name="ghost_wraith_name">Wraith</string>
+    <string name="ghost_wraith_desc">Non lascia impronte nel sale e si muove verso i giocatori.</string>
+
+    <string name="ghost_phantom_name">Phantom</string>
+    <string name="ghost_phantom_desc">Drena più sanità mentale e scompare quando fotografato.</string>
+
+    <string name="ghost_poltergeist_name">Poltergeist</string>
+    <string name="ghost_poltergeist_desc">Lancia molti oggetti in raffiche.</string>
+
+    <string name="ghost_banshee_name">Banshee</string>
+    <string name="ghost_banshee_desc">Prende di mira un solo giocatore ed emette un urlo unico.</string>
+
+    <string name="ghost_jinn_name">Jinn</string>
+    <string name="ghost_jinn_desc">Si muove più velocemente con la corrente accesa.</string>
+
+    <string name="ghost_mare_name">Mare</string>
+    <string name="ghost_mare_desc">Preferisce l’oscurità e spegne le luci.</string>
+
+    <string name="ghost_revenant_name">Revenant</string>
+    <string name="ghost_revenant_desc">Molto lento senza visione, estremamente veloce con visione.</string>
+
+    <string name="ghost_shade_name">Shade</string>
+    <string name="ghost_shade_desc">Molto timido e meno attivo vicino ai giocatori.</string>
+
+    <string name="ghost_demon_name">Demon</string>
+    <string name="ghost_demon_desc">Può cacciare con sanità mentale più alta.</string>
+
+    <string name="ghost_yurei_name">Yurei</string>
+    <string name="ghost_yurei_desc">Forte drenaggio della sanità mentale e chiude le porte.</string>
+
+    <string name="ghost_oni_name">Oni</string>
+    <string name="ghost_oni_desc">Molto attivo e altamente visibile.</string>
+
+    <string name="ghost_hantu_name">Hantu</string>
+    <string name="ghost_hantu_desc">La velocità dipende dalla temperatura.</string>
+
+    <string name="ghost_yokai_name">Yokai</string>
+    <string name="ghost_yokai_desc">Reagisce alla voce dei giocatori.</string>
+
+    <string name="ghost_myling_name">Myling</string>
+    <string name="ghost_myling_desc">Passi silenziosi; attività al microfono parabolico.</string>
+
+    <string name="ghost_onryo_name">Onryo</string>
+    <string name="ghost_onryo_desc">Cacciatore legato alle candele.</string>
+
+    <string name="ghost_twins_name">I Gemelli</string>
+    <string name="ghost_twins_desc">Interagisce in due luoghi contemporaneamente.</string>
+
+    <string name="ghost_raiju_name">Raiju</string>
+    <string name="ghost_raiju_desc">Estremamente veloce vicino ai dispositivi elettronici.</string>
+
+    <string name="ghost_obake_name">Obake</string>
+    <string name="ghost_obake_desc">Impronte UV uniche e muta forma.</string>
+
+    <string name="ghost_goryo_name">Goryo</string>
+    <string name="ghost_goryo_desc">DOTS visibile solo tramite telecamere.</string>
+
+    <string name="ghost_moroi_name">Moroi</string>
+    <string name="ghost_moroi_desc">Maledice i giocatori e accelera con bassa sanità mentale.</string>
+
+    <string name="ghost_deogen_name">Deogen</string>
+    <string name="ghost_deogen_desc">Conosce sempre la tua posizione.</string>
+
+    <string name="ghost_thaye_name">Thaye</string>
+    <string name="ghost_thaye_desc">Invecchia e si indebolisce col tempo.</string>
+
+    <string name="ghost_mimic_name">Il Mimic</string>
+    <string name="ghost_mimic_desc">Imita altri fantasmi e mostra orbi falsi.</string>
+
+    <!-- Clear All -->
+    <string name="title_clear_all">Cancella tutto</string>
+    <string name="clear_all_message">Sei sicuro di voler cancellare tutte le selezioni?</string>
+    <string name="clear_all_yes">Sì</string>
+    <string name="clear_all_no">No</string>
+
+    <!-- Persistence -->
+    <string name="danger_settings">danger_settings</string>
+    <string name="danger_level_prefix">danger_level_</string>
+
+    <!-- Sanity Thresholds -->
+    <string name="sanity_80">Caccia all’80% di sanità mentale o meno</string>
+    <string name="sanity_75">Caccia al 75% di sanità mentale o meno</string>
+    <string name="sanity_70">Caccia al 70% di sanità mentale o meno</string>
+    <string name="sanity_65">Caccia al 65% di sanità mentale o meno</string>
+    <string name="sanity_60">Caccia al 60% di sanità mentale o meno</string>
+    <string name="sanity_55">Caccia al 55% di sanità mentale o meno</string>
+    <string name="sanity_50">Caccia al 50% di sanità mentale o meno</string>
+    <string name="sanity_45">Caccia al 45% di sanità mentale o meno</string>
+    <string name="sanity_40">Caccia al 40% di sanità mentale o meno</string>
+    <string name="sanity_35">Caccia al 35% di sanità mentale o meno</string>
+    <string name="sanity_30">Caccia al 30% di sanità mentale o meno</string>
+    <string name="sanity_25">Caccia al 25% di sanità mentale o meno</string>
+    <string name="sanity_20">Caccia al 20% di sanità mentale o meno</string>
+    <string name="sanity_15">Caccia al 15% di sanità mentale o meno</string>
+    <string name="sanity_10">Caccia al 10% di sanità mentale o meno</string>
+    <string name="sanity_5">Caccia al 5% di sanità mentale o meno</string>
+    <string name="sanity_0">Caccia allo 0% di sanità mentale</string>
+    <string name="reset_to_default">Reset to default</string>
+    <string name="back_to_results">Back to results</string>
+    <string name="behavior_calm_aggressive_alternating">Hunts alternate between fast and slow depending on aggression.</string>
+    <string name="ghost_obambo_name">Obambo</string>
+    <string name="ghost_dayan_desc">A tortured ghost. Moving while near the ghost makes it speed up. Standing still near the ghost slows the ghost down.</string>
+    <string name="ghost_gallu_name">Gallu</string>
+    <string name="ghost_gallu_desc">A ghost that starts out enraged but becomes less aggressive as sanity drops.</string>
+    <string name="ghost_dayan_name">Dayan</string>
+    <string name="ghost_obambo_desc">A ghost that alternates between aggressive and calm states. Switches states every 2 minutes. For the first minutes after opening an exit door, it is calm.</string>
+</resources>
