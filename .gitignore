@@ -19,3 +19,5 @@ local.properties
 /Console Screenshots/clear_all_dialogue.png
 /Console Screenshots/evidence_screen.png
 /Console Screenshots/results_screen.png
+app/google-services.json
+app/secrets.properties
