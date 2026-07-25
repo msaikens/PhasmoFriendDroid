@@ -160,8 +160,8 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
     /** Couldn't tell either way — don't change any evidence/behavior, just suggest something else. */
     fun markTestInconclusive(subject: TestSubject) {
         when (subject) {
-            is TestSubject.EvidenceClue -> dismissedEvidence.value = dismissedEvidence.value + subject.evidence
-            is TestSubject.BehaviorClue -> dismissedBehaviorIds.value = dismissedBehaviorIds.value + subject.behaviorId
+            is TestSubject.EvidenceClue -> dismissedEvidence.value += subject.evidence
+            is TestSubject.BehaviorClue -> dismissedBehaviorIds.value += subject.behaviorId
             TestSubject.None -> Unit
         }
     }

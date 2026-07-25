@@ -40,17 +40,15 @@ class DeductionEngine {
         }
 
         input.confirmedEvidence.forEach { evidence ->
-            when {
-                evidence in ghost.evidences -> {
+            when (evidence) {
+                in ghost.evidences -> {
                     rawScore += 30
                     reasons += "${evidence.label()} matches this ghost's evidence."
                 }
-
-                evidence in ghost.extraEvidence -> {
+                in ghost.extraEvidence -> {
                     rawScore += 12
                     warnings += "${evidence.label()} can appear as extra or misleading evidence for this ghost."
                 }
-
                 else -> {
                     rawScore -= 45
                     eliminated = true
@@ -60,8 +58,8 @@ class DeductionEngine {
         }
 
         input.ruledOutEvidence.forEach { evidence ->
-            when {
-                evidence in ghost.evidences -> {
+            when (evidence) {
+                in ghost.evidences -> {
                     if (input.evidenceMode.canHardEliminateRuledOutEvidence) {
                         rawScore -= 35
                         eliminated = true
@@ -71,12 +69,10 @@ class DeductionEngine {
                         warnings += "You ruled out ${evidence.label()}, but ${input.evidenceMode.displayName} can hide normal evidence."
                     }
                 }
-
-                evidence in ghost.extraEvidence -> {
+                in ghost.extraEvidence -> {
                     rawScore -= 10
                     warnings += "You ruled out ${evidence.label()}, which this ghost can show as extra evidence."
                 }
-
                 else -> {
                     rawScore += 6
                     reasons += "Ruling out ${evidence.label()} does not conflict with this ghost."

@@ -149,7 +149,7 @@ class NextBestTestEngine {
         input: InvestigationInput,
         dismissed: DismissedClues
     ): EvidenceSplit? {
-        val unknownEvidence = Evidence.values()
+        val unknownEvidence = Evidence.entries
             .filter { evidence ->
                 evidence !in input.confirmedEvidence &&
                         evidence !in input.ruledOutEvidence &&
