@@ -19,6 +19,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.phasmofriend.app.R
+import com.phasmofriend.app.model.EvidenceState
 import com.phasmofriend.app.ui.components.BehaviorRow
 import com.phasmofriend.app.ui.components.PhasmoCard
 import com.phasmofriend.app.ui.shared.InvestigationViewModel
@@ -72,8 +73,8 @@ fun BehaviorScreen(viewModel: InvestigationViewModel) {
                 items(filtered, key = { it.id }) { behavior ->
                     BehaviorRow(
                         label = behavior.label,
-                        checked = behavior.id in uiState.selectedBehaviorIds,
-                        onToggle = { viewModel.toggleBehavior(behavior.id) }
+                        state = uiState.behaviorStates[behavior.id] ?: EvidenceState.OFF,
+                        onClick = { viewModel.cycleBehavior(behavior.id) }
                     )
                 }
             }

@@ -73,7 +73,7 @@ class NextBestTestEngine {
             }
         }
 
-        val behaviorSplit = findBestBehaviorSignal(activeCandidates, dismissed)
+        val behaviorSplit = findBestBehaviorSignal(activeCandidates, input, dismissed)
 
         if (behaviorSplit != null) {
             return NextBestTest(
@@ -121,7 +121,11 @@ class NextBestTestEngine {
         }
 
         val specialBehavior = ghost.possibleBehaviors
-            .firstOrNull { behavior -> behavior.id !in dismissed.behaviorIds }
+            .firstOrNull { behavior ->
+                behavior.id !in dismissed.behaviorIds &&
+                        behavior !in input.observedBehaviors &&
+                        behavior !in input.ruledOutBehaviors
+            }
 
         if (specialBehavior != null) {
             return NextBestTest(
@@ -180,11 +184,16 @@ class NextBestTestEngine {
 
     private fun findBestBehaviorSignal(
         candidates: List<DeductionResult>,
+        input: InvestigationInput,
         dismissed: DismissedClues
     ): BehaviorSignal? {
         return candidates
             .flatMap { result -> result.ghost.possibleBehaviors }
-            .filter { behavior -> behavior.id !in dismissed.behaviorIds }
+            .filter { behavior ->
+                behavior.id !in dismissed.behaviorIds &&
+                        behavior !in input.observedBehaviors &&
+                        behavior !in input.ruledOutBehaviors
+            }
             .groupingBy { behavior -> behavior }
             .eachCount()
             .map { entry ->

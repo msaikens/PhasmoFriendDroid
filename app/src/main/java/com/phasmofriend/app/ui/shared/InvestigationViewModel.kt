@@ -31,7 +31,7 @@ data class InvestigationUiState(
     val catalogStatus: CatalogStatus = CatalogStatus.LOADING,
     val evidenceMode: EvidenceMode = EvidenceMode.STANDARD,
     val evidenceStates: Map<Evidence, EvidenceState> = emptyMap(),
-    val selectedBehaviorIds: Set<String> = emptySet(),
+    val behaviorStates: Map<String, EvidenceState> = emptyMap(),
     val behaviors: List<Behavior> = emptyList(),
     val candidates: List<DeductionResult> = emptyList(),
     val nextBestTest: NextBestTest? = null,
@@ -50,7 +50,7 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
 
     private val evidenceMode = MutableStateFlow(EvidenceMode.STANDARD)
     private val evidenceStates = MutableStateFlow<Map<Evidence, EvidenceState>>(emptyMap())
-    private val selectedBehaviorIds = MutableStateFlow<Set<String>>(emptySet())
+    private val behaviorStates = MutableStateFlow<Map<String, EvidenceState>>(emptyMap())
 
     // Clues dismissed as "inconclusive" for the current investigation state, so the
     // engine surfaces a different suggestion instead of repeating the same one.
@@ -58,7 +58,7 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
     private val dismissedBehaviorIds = MutableStateFlow<Set<String>>(emptySet())
 
     private val evidenceInput = combine(evidenceStates, dismissedEvidence) { states, dismissed -> states to dismissed }
-    private val behaviorInput = combine(selectedBehaviorIds, dismissedBehaviorIds) { selected, dismissed -> selected to dismissed }
+    private val behaviorInput = combine(behaviorStates, dismissedBehaviorIds) { states, dismissed -> states to dismissed }
 
     val uiState: StateFlow<InvestigationUiState> = combine(
         catalogRepository.state,
@@ -66,12 +66,13 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
         evidenceInput,
         behaviorInput,
         DangerSettingsStore.overrides(application)
-    ) { catalog, mode, (states, dismissedEv), (selectedIds, dismissedBehIds), overrides ->
+    ) { catalog, mode, (evStates, dismissedEv), (behStates, dismissedBehIds), overrides ->
         val input = InvestigationInput(
             evidenceMode = mode,
-            confirmedEvidence = states.filterValues { it == EvidenceState.HAS }.keys,
-            ruledOutEvidence = states.filterValues { it == EvidenceState.NOT }.keys,
-            observedBehaviors = catalog.behaviors.filter { it.id in selectedIds }.toSet()
+            confirmedEvidence = evStates.filterValues { it == EvidenceState.HAS }.keys,
+            ruledOutEvidence = evStates.filterValues { it == EvidenceState.NOT }.keys,
+            observedBehaviors = catalog.behaviors.filter { behStates[it.id] == EvidenceState.HAS }.toSet(),
+            ruledOutBehaviors = catalog.behaviors.filter { behStates[it.id] == EvidenceState.NOT }.toSet()
         )
 
         val candidates = deductionEngine.evaluate(catalog.ghosts, input)
@@ -80,8 +81,8 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
         InvestigationUiState(
             catalogStatus = catalog.status,
             evidenceMode = mode,
-            evidenceStates = states,
-            selectedBehaviorIds = selectedIds,
+            evidenceStates = evStates,
+            behaviorStates = behStates,
             behaviors = catalog.behaviors,
             candidates = candidates,
             nextBestTest = nextBestTestEngine.recommend(candidates, input, dismissed),
@@ -109,24 +110,26 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
     }
 
     fun cycleEvidence(evidence: Evidence) {
-        val next = when (getEvidenceState(evidence)) {
-            EvidenceState.OFF -> EvidenceState.HAS
-            EvidenceState.HAS -> EvidenceState.NOT
-            EvidenceState.NOT -> EvidenceState.OFF
-        }
-        setEvidenceState(evidence, next)
+        setEvidenceState(evidence, getEvidenceState(evidence).next())
     }
 
-    fun toggleBehavior(behaviorId: String) {
-        val current = selectedBehaviorIds.value.toMutableSet()
-        if (!current.add(behaviorId)) current.remove(behaviorId)
-        selectedBehaviorIds.value = current
+    fun getBehaviorState(behaviorId: String): EvidenceState =
+        behaviorStates.value[behaviorId] ?: EvidenceState.OFF
+
+    fun setBehaviorState(behaviorId: String, state: EvidenceState) {
+        val current = behaviorStates.value.toMutableMap()
+        if (state == EvidenceState.OFF) current.remove(behaviorId) else current[behaviorId] = state
+        behaviorStates.value = current
         clearDismissed()
+    }
+
+    fun cycleBehavior(behaviorId: String) {
+        setBehaviorState(behaviorId, getBehaviorState(behaviorId).next())
     }
 
     fun clearAll() {
         evidenceStates.value = emptyMap()
-        selectedBehaviorIds.value = emptySet()
+        behaviorStates.value = emptyMap()
         clearDismissed()
     }
 
@@ -140,9 +143,7 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
     fun markTestPassed(subject: TestSubject) {
         when (subject) {
             is TestSubject.EvidenceClue -> setEvidenceState(subject.evidence, EvidenceState.HAS)
-            is TestSubject.BehaviorClue -> {
-                if (subject.behaviorId !in selectedBehaviorIds.value) toggleBehavior(subject.behaviorId)
-            }
+            is TestSubject.BehaviorClue -> setBehaviorState(subject.behaviorId, EvidenceState.HAS)
             TestSubject.None -> Unit
         }
     }
@@ -151,9 +152,7 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
     fun markTestFailed(subject: TestSubject) {
         when (subject) {
             is TestSubject.EvidenceClue -> setEvidenceState(subject.evidence, EvidenceState.NOT)
-            is TestSubject.BehaviorClue -> {
-                if (subject.behaviorId in selectedBehaviorIds.value) toggleBehavior(subject.behaviorId)
-            }
+            is TestSubject.BehaviorClue -> setBehaviorState(subject.behaviorId, EvidenceState.NOT)
             TestSubject.None -> Unit
         }
     }
@@ -165,6 +164,12 @@ class InvestigationViewModel(application: Application) : AndroidViewModel(applic
             is TestSubject.BehaviorClue -> dismissedBehaviorIds.value = dismissedBehaviorIds.value + subject.behaviorId
             TestSubject.None -> Unit
         }
+    }
+
+    private fun EvidenceState.next(): EvidenceState = when (this) {
+        EvidenceState.OFF -> EvidenceState.HAS
+        EvidenceState.HAS -> EvidenceState.NOT
+        EvidenceState.NOT -> EvidenceState.OFF
     }
 
     private fun clearDismissed() {

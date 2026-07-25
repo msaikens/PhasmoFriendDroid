@@ -94,6 +94,18 @@ class DeductionEngine {
             }
         }
 
+        // Behaviors are possible traits, not guaranteed like evidence, so ruling one out is a
+        // strong signal but not a hard contradiction -- it lowers the score without eliminating.
+        input.ruledOutBehaviors.forEach { behavior ->
+            if (behavior in ghost.possibleBehaviors) {
+                rawScore -= 20
+                contradictions += "You ruled out ${behavior.label}, which this ghost can show."
+            } else {
+                rawScore += 4
+                reasons += "Ruling out ${behavior.label} does not conflict with this ghost."
+            }
+        }
+
         val score = rawScore.coerceAtLeast(0)
 
         val matchPercent = if (input.hasAnySignals) {
