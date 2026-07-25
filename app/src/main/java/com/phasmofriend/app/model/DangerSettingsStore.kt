@@ -1,96 +1,46 @@
-// app/src/main/java/com/phasmofriend/app/model/DangerSettingsStore.java
-package com.phasmofriend.app.model;
+package com.phasmofriend.app.model
 
-import android.content.Context;
-import android.content.SharedPreferences;
+import android.content.Context
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.stringPreferencesKey
+import androidx.datastore.preferences.preferencesDataStore
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+private val Context.dangerSettingsDataStore: DataStore<Preferences> by preferencesDataStore(
+    name = "danger_settings"
+)
 
-import com.phasmofriend.app.R;
+/**
+ * Per-user danger-level overrides, keyed by ghost id. Purely local — this is a
+ * personal annotation, never synced to Firestore alongside the shared catalog.
+ */
+object DangerSettingsStore {
 
-import kotlin.jvm.JvmStatic;
+    private const val KEY_PREFIX = "danger_level_"
 
-public final class DangerSettingsStore {
+    private fun keyFor(ghostId: String) = stringPreferencesKey(KEY_PREFIX + ghostId)
 
-    // These are populated from resources on first use
-    private static String PREF_NAME = "danger_settings";
-    private static String KEY_PREFIX = "danger_level_";
-
-    // Private constructor — this class should never be instantiated
-    private DangerSettingsStore() {
+    /** All current overrides, keyed by ghost id. Missing entries mean "use the ghost's own default". */
+    fun overrides(context: Context): Flow<Map<String, DangerLevel>> {
+        return context.dangerSettingsDataStore.data.map { prefs ->
+            prefs.asMap().entries.mapNotNull { (key, value) ->
+                val ghostId = key.name.removePrefix(KEY_PREFIX).takeIf { key.name.startsWith(KEY_PREFIX) }
+                val level = (value as? String)?.let { runCatching { DangerLevel.valueOf(it) }.getOrNull() }
+                if (ghostId != null && level != null) ghostId to level else null
+            }.toMap()
+        }
     }
 
-    /**
-     * Load preference name and key prefix from string resources.
-     * Called automatically before accessing SharedPreferences.
-     */
-    private static void loadKeysFromResources(@NonNull Context ctx) {
-        PREF_NAME = ctx.getString(R.string.danger_settings);
-        KEY_PREFIX = ctx.getString(R.string.danger_level_prefix);
-    }
-
-    @NonNull
-    private static SharedPreferences prefs(@NonNull Context ctx) {
-        loadKeysFromResources(ctx);
-        return ctx.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-    }
-
-    @NonNull
-    private static String keyFor(@NonNull Ghost ghost) {
-        return KEY_PREFIX + ghost.getNameResId();
-    }
-
-    /**
-     * MUST be static so Kotlin can call:
-     * DangerSettingsStore.getEffectiveDangerLevel(context, ghost)
-     */
-    @JvmStatic
-    @NonNull
-    public static DangerLevel getEffectiveDangerLevel(
-            @NonNull Context ctx,
-            @NonNull Ghost ghost
-    ) {
-        SharedPreferences p = prefs(ctx);
-        String stored = p.getString(keyFor(ghost), null);
-
-        if (stored != null) {
-            try {
-                return DangerLevel.valueOf(stored);
-            } catch (IllegalArgumentException ignored) {
-                // Corrupted / outdated value — fall back to default
+    suspend fun setDangerLevel(context: Context, ghost: Ghost, newLevel: DangerLevel?) {
+        context.dangerSettingsDataStore.edit { prefs ->
+            if (newLevel == null || newLevel == ghost.dangerLevel) {
+                prefs.remove(keyFor(ghost.id))
+            } else {
+                prefs[keyFor(ghost.id)] = newLevel.name
             }
         }
-
-        // Fallback: use the ghost's built-in default danger level
-        return ghost.getDangerLevel();
-    }
-
-    /**
-     * MUST be static so Kotlin can call:
-     * DangerSettingsStore.setDangerLevel(context, ghost, level)
-     * If newLevel is null or equals the default ghost.getDangerLevel(),
-     * the override is removed and we revert to default behavior.
-     */
-    @JvmStatic
-    public static void setDangerLevel(
-            @NonNull Context ctx,
-            @NonNull Ghost ghost,
-            @Nullable DangerLevel newLevel
-    ) {
-        SharedPreferences p = prefs(ctx);
-        SharedPreferences.Editor e = p.edit();
-
-        String key = keyFor(ghost);
-        DangerLevel defaultLevel = ghost.getDangerLevel();
-
-        if (newLevel == null || newLevel == defaultLevel) {
-            // No need to store default; clear any override
-            e.remove(key);
-        } else {
-            e.putString(key, newLevel.name());
-        }
-
-        e.apply();
     }
 }

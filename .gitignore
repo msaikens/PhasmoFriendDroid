@@ -13,4 +13,5 @@
 /captures
 .externalNativeBuild
 .cxx
+/app/secrets.properties
 local.properties

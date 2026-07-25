@@ -1,0 +1,1356 @@
+{
+  "ghosts": [
+    {
+      "id": "spirit",
+      "name": "Spirit",
+      "nameTranslations": {
+        "de": "Spirit",
+        "es": "Spirit",
+        "fr": "Spirit",
+        "it": "Spirit"
+      },
+      "description": "Baseline ghost with no major strengths.",
+      "descriptionTranslations": {
+        "de": "Grundlegender Geist ohne besondere Stärken.",
+        "es": "Fantasma base sin fortalezas importantes.",
+        "fr": "Fantôme de base sans forces particulières.",
+        "it": "Fantasma base senza punti di forza principali."
+      },
+      "evidence": [
+        "EMF5",
+        "SPIRIT_BOX",
+        "GHOST_WRITING"
+      ],
+      "extraEvidence": [],
+      "behaviors": [],
+      "dangerLevel": "LOW",
+      "order": 0
+    },
+    {
+      "id": "wraith",
+      "name": "Wraith",
+      "nameTranslations": {
+        "de": "Wraith",
+        "es": "Wraith",
+        "fr": "Wraith",
+        "it": "Wraith"
+      },
+      "description": "Does not leave footprints in salt and roams toward players.",
+      "descriptionTranslations": {
+        "de": "Hinterlässt keine Fußspuren im Salz und wandert auf Spieler zu.",
+        "es": "No deja huellas en la sal y se desplaza hacia los jugadores.",
+        "fr": "Ne laisse pas de traces dans le sel et se déplace vers les joueurs.",
+        "it": "Non lascia impronte nel sale e si muove verso i giocatori."
+      },
+      "evidence": [
+        "EMF5",
+        "SPIRIT_BOX",
+        "DOTS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "avoids_salt",
+        "teleports_between_hunts"
+      ],
+      "dangerLevel": "LOW",
+      "order": 1
+    },
+    {
+      "id": "phantom",
+      "name": "Phantom",
+      "nameTranslations": {
+        "de": "Phantom",
+        "es": "Phantom",
+        "fr": "Phantom",
+        "it": "Phantom"
+      },
+      "description": "Drains extra sanity and disappears when photographed.",
+      "descriptionTranslations": {
+        "de": "Entzieht zusätzliche geistige Gesundheit und verschwindet bei Fotos.",
+        "es": "Drena más cordura y desaparece al ser fotografiado.",
+        "fr": "Draine davantage la santé mentale et disparaît lorsqu’il est photographié.",
+        "it": "Drena più sanità mentale e scompare quando fotografato."
+      },
+      "evidence": [
+        "DOTS",
+        "UV",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "sanity_drain_strong",
+        "roamer",
+        "slow_blink",
+        "disappears_from_photos"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 2
+    },
+    {
+      "id": "poltergeist",
+      "name": "Poltergeist",
+      "nameTranslations": {
+        "de": "Poltergeist",
+        "es": "Poltergeist",
+        "fr": "Poltergeist",
+        "it": "Poltergeist"
+      },
+      "description": "Throws many objects in bursts.",
+      "descriptionTranslations": {
+        "de": "Wirft viele Objekte in schnellen Abfolgen.",
+        "es": "Lanza muchos objetos en ráfagas.",
+        "fr": "Projette de nombreux objets en rafales.",
+        "it": "Lancia molti oggetti in raffiche."
+      },
+      "evidence": [
+        "GHOST_WRITING",
+        "UV",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "sanity_drain_strong",
+        "throws_piles_or_multiple_at_once"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 3
+    },
+    {
+      "id": "banshee",
+      "name": "Banshee",
+      "nameTranslations": {
+        "de": "Banshee",
+        "es": "Banshee",
+        "fr": "Banshee",
+        "it": "Banshee"
+      },
+      "description": "Targets one player and produces a unique scream.",
+      "descriptionTranslations": {
+        "de": "Zielt auf einen Spieler und erzeugt einen einzigartigen Schrei.",
+        "es": "Ataca a un solo jugador y emite un grito único.",
+        "fr": "Cible un seul joueur et émet un cri unique.",
+        "it": "Prende di mira un solo giocatore ed emette un urlo unico."
+      },
+      "evidence": [
+        "DOTS",
+        "GHOST_ORB",
+        "UV"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "roamer",
+        "sanity_drain_strong",
+        "screams_in_audio_or_parabolic",
+        "locks_onto_one_player"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 4
+    },
+    {
+      "id": "jinn",
+      "name": "Jinn",
+      "nameTranslations": {
+        "de": "Jinn",
+        "es": "Jinn",
+        "fr": "Jinn",
+        "it": "Jinn"
+      },
+      "description": "Moves faster with power on and line of sight.",
+      "descriptionTranslations": {
+        "de": "Bewegt sich schneller bei eingeschaltetem Strom und Sichtkontakt.",
+        "es": "Se mueve más rápido con la electricidad encendida.",
+        "fr": "Se déplace plus vite avec le courant et une ligne de vue.",
+        "it": "Si muove più velocemente con la corrente accesa."
+      },
+      "evidence": [
+        "EMF5",
+        "UV",
+        "FREEZING_TEMPS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "line_of_sight_speed_up",
+        "drains_sanity_near_fuse_box"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 5
+    },
+    {
+      "id": "mare",
+      "name": "Mare",
+      "nameTranslations": {
+        "de": "Mare",
+        "es": "Mare",
+        "fr": "Mare",
+        "it": "Mare"
+      },
+      "description": "Prefers darkness and turns lights off.",
+      "descriptionTranslations": {
+        "de": "Bevorzugt Dunkelheit und schaltet Lichter aus.",
+        "es": "Prefiere la oscuridad y apaga las luces.",
+        "fr": "Préfère l’obscurité et éteint les lumières.",
+        "it": "Preferisce l’oscurità e spegne le luci."
+      },
+      "evidence": [
+        "GHOST_WRITING",
+        "GHOST_ORB",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "early_hunter",
+        "instantly_toggles_lights_off"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 6
+    },
+    {
+      "id": "revenant",
+      "name": "Revenant",
+      "nameTranslations": {
+        "de": "Revenant",
+        "es": "Revenant",
+        "fr": "Revenant",
+        "it": "Revenant"
+      },
+      "description": "Slow without sight, extremely fast with it.",
+      "descriptionTranslations": {
+        "de": "Sehr langsam ohne Sichtkontakt, extrem schnell mit Sichtkontakt.",
+        "es": "Muy lento sin visión, extremadamente rápido con ella.",
+        "fr": "Très lent sans vision, extrêmement rapide avec vision.",
+        "it": "Molto lento senza visione, estremamente veloce con visione."
+      },
+      "evidence": [
+        "GHOST_WRITING",
+        "GHOST_ORB",
+        "FREEZING_TEMPS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "slow_hunt",
+        "slow_when_hidden_fast_when_visible"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 7
+    },
+    {
+      "id": "shade",
+      "name": "Shade",
+      "nameTranslations": {
+        "de": "Shade",
+        "es": "Shade",
+        "fr": "Shade",
+        "it": "Shade"
+      },
+      "description": "Very shy and less active near players.",
+      "descriptionTranslations": {
+        "de": "Sehr scheu und weniger aktiv in der Nähe von Spielern.",
+        "es": "Muy tímido y menos activo cerca de jugadores.",
+        "fr": "Très timide et moins actif près des joueurs.",
+        "it": "Molto timido e meno attivo vicino ai giocatori."
+      },
+      "evidence": [
+        "GHOST_WRITING",
+        "EMF5",
+        "FREEZING_TEMPS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "shy",
+        "calm_when_player_in_room",
+        "late_hunter"
+      ],
+      "dangerLevel": "LOW",
+      "order": 8
+    },
+    {
+      "id": "demon",
+      "name": "Demon",
+      "nameTranslations": {
+        "de": "Demon",
+        "es": "Demon",
+        "fr": "Demon",
+        "it": "Demon"
+      },
+      "description": "Hunts at higher sanity and smudge lasts less.",
+      "descriptionTranslations": {
+        "de": "Jagt bei höherer geistiger Gesundheit; Räucherstäbchen wirken kürzer.",
+        "es": "Puede cazar con cordura más alta.",
+        "fr": "Peut chasser à une santé mentale plus élevée.",
+        "it": "Può cacciare con sanità mentale più alta."
+      },
+      "evidence": [
+        "GHOST_WRITING",
+        "UV",
+        "FREEZING_TEMPS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "early_hunter"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 9
+    },
+    {
+      "id": "yurei",
+      "name": "Yurei",
+      "nameTranslations": {
+        "de": "Yurei",
+        "es": "Yurei",
+        "fr": "Yurei",
+        "it": "Yurei"
+      },
+      "description": "Strong sanity drain and door-closing ability.",
+      "descriptionTranslations": {
+        "de": "Starker Sanitätsverlust und Fähigkeit, Türen zu schließen.",
+        "es": "Drena mucha cordura y cierra puertas.",
+        "fr": "Fort drain de santé mentale et capacité de fermer les portes.",
+        "it": "Forte drenaggio della sanità mentale e chiude le porte."
+      },
+      "evidence": [
+        "DOTS",
+        "GHOST_ORB",
+        "FREEZING_TEMPS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "sanity_drain_strong",
+        "closes_doors_silently"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 10
+    },
+    {
+      "id": "oni",
+      "name": "Oni",
+      "nameTranslations": {
+        "de": "Oni",
+        "es": "Oni",
+        "fr": "Oni",
+        "it": "Oni"
+      },
+      "description": "Very active and highly visible.",
+      "descriptionTranslations": {
+        "de": "Sehr aktiv und gut sichtbar.",
+        "es": "Muy activo y fácil de ver.",
+        "fr": "Très actif et très visible.",
+        "it": "Molto attivo e altamente visibile."
+      },
+      "evidence": [
+        "DOTS",
+        "EMF5",
+        "FREEZING_TEMPS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "sanity_drain_strong",
+        "cannot_mist_form",
+        "fast_blink",
+        "more_active_near_players"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 11
+    },
+    {
+      "id": "hantu",
+      "name": "Hantu",
+      "nameTranslations": {
+        "de": "Hantu",
+        "es": "Hantu",
+        "fr": "Hantu",
+        "it": "Hantu"
+      },
+      "description": "Speed depends on temperature.",
+      "descriptionTranslations": {
+        "de": "Geschwindigkeit hängt von der Temperatur ab.",
+        "es": "Su velocidad depende de la temperatura.",
+        "fr": "Sa vitesse dépend de la température.",
+        "it": "La velocità dipende dalla temperatura."
+      },
+      "evidence": [
+        "GHOST_ORB",
+        "UV",
+        "FREEZING_TEMPS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "fast_hunt",
+        "slow_hunt",
+        "visible_breath"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 12
+    },
+    {
+      "id": "yokai",
+      "name": "Yokai",
+      "nameTranslations": {
+        "de": "Yokai",
+        "es": "Yokai",
+        "fr": "Yokai",
+        "it": "Yokai"
+      },
+      "description": "Triggered by talking.",
+      "descriptionTranslations": {
+        "de": "Wird durch Sprechen ausgelöst.",
+        "es": "Se activa al hablar.",
+        "fr": "Réagit à la voix des joueurs.",
+        "it": "Reagisce alla voce dei giocatori."
+      },
+      "evidence": [
+        "DOTS",
+        "GHOST_ORB",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "early_hunter",
+        "hunts_when_you_talk"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 13
+    },
+    {
+      "id": "myling",
+      "name": "Myling",
+      "nameTranslations": {
+        "de": "Myling",
+        "es": "Myling",
+        "fr": "Myling",
+        "it": "Myling"
+      },
+      "description": "Quiet footsteps; parabolic activity.",
+      "descriptionTranslations": {
+        "de": "Leise Schritte; aktiv am Parabolmikrofon.",
+        "es": "Pasos silenciosos; actividad en micrófono parabólico.",
+        "fr": "Pas silencieux ; activité au micro parabolique.",
+        "it": "Passi silenziosi; attività al microfono parabolico."
+      },
+      "evidence": [
+        "GHOST_WRITING",
+        "EMF5",
+        "UV"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "hard_to_hear_hunting",
+        "produces_sounds_more_often"
+      ],
+      "dangerLevel": "LOW",
+      "order": 14
+    },
+    {
+      "id": "onryo",
+      "name": "Onryo",
+      "nameTranslations": {
+        "de": "Onryo",
+        "es": "Onryo",
+        "fr": "Onryo",
+        "it": "Onryo"
+      },
+      "description": "Candle-based hunter.",
+      "descriptionTranslations": {
+        "de": "Jäger, der auf Kerzen basiert.",
+        "es": "Cazador basado en velas.",
+        "fr": "Chasseur lié aux bougies.",
+        "it": "Cacciatore legato alle candele."
+      },
+      "evidence": [
+        "GHOST_ORB",
+        "FREEZING_TEMPS",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "early_hunter",
+        "extinguished_flame_causes_hunt"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 15
+    },
+    {
+      "id": "twins",
+      "name": "The Twins",
+      "nameTranslations": {
+        "de": "Die Zwillinge",
+        "es": "Los Gemelos",
+        "fr": "Les Jumeaux",
+        "it": "I Gemelli"
+      },
+      "description": "Interacts in two places at once.",
+      "descriptionTranslations": {
+        "de": "Interagiert an zwei Orten gleichzeitig.",
+        "es": "Interactúa en dos lugares al mismo tiempo.",
+        "fr": "Interagit à deux endroits en même temps.",
+        "it": "Interagisce in due luoghi contemporaneamente."
+      },
+      "evidence": [
+        "EMF5",
+        "FREEZING_TEMPS",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "activity_in_multiple_places_at_once",
+        "random_fixed_hunt_speed"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 16
+    },
+    {
+      "id": "raiju",
+      "name": "Raiju",
+      "nameTranslations": {
+        "de": "Raiju",
+        "es": "Raiju",
+        "fr": "Raiju",
+        "it": "Raiju"
+      },
+      "description": "Very fast near electronics.",
+      "descriptionTranslations": {
+        "de": "Sehr schnell in der Nähe von Elektronik.",
+        "es": "Extremadamente rápido cerca de dispositivos electrónicos.",
+        "fr": "Extrêmement rapide près des appareils électroniques.",
+        "it": "Estremamente veloce vicino ai dispositivi elettronici."
+      },
+      "evidence": [
+        "DOTS",
+        "EMF5",
+        "GHOST_ORB"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "faster_near_electronics",
+        "wider_electronic_disruption_range"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 17
+    },
+    {
+      "id": "obake",
+      "name": "Obake",
+      "nameTranslations": {
+        "de": "Obake",
+        "es": "Obake",
+        "fr": "Obake",
+        "it": "Obake"
+      },
+      "description": "Unique UV prints and shapeshifting.",
+      "descriptionTranslations": {
+        "de": "Einzigartige UV-Abdrücke und Gestaltwandel.",
+        "es": "Huellas UV únicas y cambia de forma.",
+        "fr": "Empreintes UV uniques et métamorphose.",
+        "it": "Impronte UV uniche e muta forma."
+      },
+      "evidence": [
+        "EMF5",
+        "GHOST_ORB",
+        "UV"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "shapeshifter",
+        "handprint_has_six_fingers",
+        "sometimes_leaves_no_fingerprint"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 18
+    },
+    {
+      "id": "goryo",
+      "name": "Goryo",
+      "nameTranslations": {
+        "de": "Goryo",
+        "es": "Goryo",
+        "fr": "Goryo",
+        "it": "Goryo"
+      },
+      "description": "DOTS visible only through cameras.",
+      "descriptionTranslations": {
+        "de": "DOTS nur über Kameras sichtbar.",
+        "es": "DOTS visible solo a través de cámaras.",
+        "fr": "DOTS visible uniquement via les caméras.",
+        "it": "DOTS visibile solo tramite telecamere."
+      },
+      "evidence": [
+        "DOTS",
+        "EMF5",
+        "UV"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "dots_only_visible_through_camera",
+        "cannot_wander_far_from_room"
+      ],
+      "dangerLevel": "LOW",
+      "order": 19
+    },
+    {
+      "id": "moroi",
+      "name": "Moroi",
+      "nameTranslations": {
+        "de": "Moroi",
+        "es": "Moroi",
+        "fr": "Moroi",
+        "it": "Moroi"
+      },
+      "description": "Curses players and speeds up at low sanity.",
+      "descriptionTranslations": {
+        "de": "Verflucht Spieler und wird bei niedriger Sanität schneller.",
+        "es": "Maldice a los jugadores y acelera con baja cordura.",
+        "fr": "Maudit les joueurs et accélère à faible santé mentale.",
+        "it": "Maledice i giocatori e accelera con bassa sanità mentale."
+      },
+      "evidence": [
+        "GHOST_WRITING",
+        "FREEZING_TEMPS",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "fast_hunt",
+        "sanity_drain_strong"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 20
+    },
+    {
+      "id": "deogen",
+      "name": "Deogen",
+      "nameTranslations": {
+        "de": "Deogen",
+        "es": "Deogen",
+        "fr": "Deogen",
+        "it": "Deogen"
+      },
+      "description": "Always knows your location.",
+      "descriptionTranslations": {
+        "de": "Kennt immer deinen Standort.",
+        "es": "Siempre conoce tu ubicación.",
+        "fr": "Connaît toujours votre position.",
+        "it": "Conosce sempre la tua posizione."
+      },
+      "evidence": [
+        "DOTS",
+        "GHOST_WRITING",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "slows_down_as_it_approaches_player",
+        "cannot_hide_from_ghost"
+      ],
+      "dangerLevel": "LOW",
+      "order": 21
+    },
+    {
+      "id": "thaye",
+      "name": "Thaye",
+      "nameTranslations": {
+        "de": "Thaye",
+        "es": "Thaye",
+        "fr": "Thaye",
+        "it": "Thaye"
+      },
+      "description": "Ages and weakens over time.",
+      "descriptionTranslations": {
+        "de": "Altert und wird mit der Zeit schwächer.",
+        "es": "Envejece y se debilita con el tiempo.",
+        "fr": "Vieillit et s’affaiblit avec le temps.",
+        "it": "Invecchia e si indebolisce col tempo."
+      },
+      "evidence": [
+        "DOTS",
+        "GHOST_WRITING",
+        "GHOST_ORB"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "early_hunter",
+        "late_hunter",
+        "hunt_movement_speed_decreases_over_time"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 22
+    },
+    {
+      "id": "obambo",
+      "name": "Obambo",
+      "nameTranslations": {
+        "de": "Obambo",
+        "es": "Obambo",
+        "fr": "Obambo",
+        "it": "Obambo"
+      },
+      "description": "A ghost that alternates between aggressive and calm states. Switches states every 2 minutes. For the first minutes after opening an exit door, it is calm.",
+      "descriptionTranslations": {
+        "de": "A ghost that alternates between aggressive and calm states. Switches states every 2 minutes. For the first minutes after opening an exit door, it is calm.",
+        "es": "A ghost that alternates between aggressive and calm states. Switches states every 2 minutes. For the first minutes after opening an exit door, it is calm.",
+        "fr": "A ghost that alternates between aggressive and calm states. Switches states every 2 minutes. For the first minutes after opening an exit door, it is calm.",
+        "it": "A ghost that alternates between aggressive and calm states. Switches states every 2 minutes. For the first minutes after opening an exit door, it is calm."
+      },
+      "evidence": [
+        "GHOST_WRITING",
+        "UV",
+        "DOTS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "calm_then_aggressive_cycles",
+        "line_of_sight_speed_up"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 23
+    },
+    {
+      "id": "dayan",
+      "name": "Dayan",
+      "nameTranslations": {
+        "de": "Dayan",
+        "es": "Dayan",
+        "fr": "Dayan",
+        "it": "Dayan"
+      },
+      "description": "A tortured ghost. Moving while near the ghost makes it speed up. Standing still near the ghost slows the ghost down.",
+      "descriptionTranslations": {
+        "de": "A tortured ghost. Moving while near the ghost makes it speed up. Standing still near the ghost slows the ghost down.",
+        "es": "A tortured ghost. Moving while near the ghost makes it speed up. Standing still near the ghost slows the ghost down.",
+        "fr": "A tortured ghost. Moving while near the ghost makes it speed up. Standing still near the ghost slows the ghost down.",
+        "it": "A tortured ghost. Moving while near the ghost makes it speed up. Standing still near the ghost slows the ghost down."
+      },
+      "evidence": [
+        "EMF5",
+        "GHOST_ORB",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "moves_faster_when_player_moves_nearby",
+        "line_of_sight_speed_up"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 24
+    },
+    {
+      "id": "gallu",
+      "name": "Gallu",
+      "nameTranslations": {
+        "de": "Gallu",
+        "es": "Gallu",
+        "fr": "Gallu",
+        "it": "Gallu"
+      },
+      "description": "A ghost that starts out enraged but becomes less aggressive as sanity drops.",
+      "descriptionTranslations": {
+        "de": "A ghost that starts out enraged but becomes less aggressive as sanity drops.",
+        "es": "A ghost that starts out enraged but becomes less aggressive as sanity drops.",
+        "fr": "A ghost that starts out enraged but becomes less aggressive as sanity drops.",
+        "it": "A ghost that starts out enraged but becomes less aggressive as sanity drops."
+      },
+      "evidence": [
+        "SPIRIT_BOX",
+        "EMF5",
+        "UV"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "protective_equipment_enrages",
+        "protective_equipment_better_as_ghost_weakens",
+        "selectively_steps_in_salt"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 25
+    },
+    {
+      "id": "mimic",
+      "name": "The Mimic",
+      "nameTranslations": {
+        "de": "Der Mimic",
+        "es": "El Mimic",
+        "fr": "Le Mimic",
+        "it": "Il Mimic"
+      },
+      "description": "Mimics other ghosts and shows fake orbs.",
+      "descriptionTranslations": {
+        "de": "Imitiert andere Geister und zeigt falsche Orbs.",
+        "es": "Imita a otros fantasmas y muestra orbes falsos.",
+        "fr": "Imite les autres fantômes et affiche de faux orbes.",
+        "it": "Imita altri fantasmi e mostra orbi falsi."
+      },
+      "evidence": [
+        "UV",
+        "FREEZING_TEMPS",
+        "SPIRIT_BOX"
+      ],
+      "extraEvidence": [
+        "GHOST_ORB"
+      ],
+      "behaviors": [
+        "mimics_other_ghost"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 26
+    },
+    {
+      "id": "deildegast",
+      "name": "Deildegast",
+      "nameTranslations": {},
+      "description": "Starts investigations moving fast with no line-of-sight acceleration, but permanently slows the more the room is disturbed.",
+      "descriptionTranslations": {},
+      "evidence": [
+        "EMF5",
+        "GHOST_WRITING",
+        "DOTS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "fixed_fast_hunt_no_los_acceleration",
+        "slows_with_object_interactions",
+        "rarely_interacts_with_doors_switches"
+      ],
+      "dangerLevel": "HIGH",
+      "order": 27
+    },
+    {
+      "id": "aswang",
+      "name": "Aswang",
+      "nameTranslations": {},
+      "description": "Accelerates to full hunting speed almost instantly once it has line of sight, but can never kill a player hidden in an official hiding spot.",
+      "descriptionTranslations": {},
+      "evidence": [
+        "FREEZING_TEMPS",
+        "GHOST_WRITING",
+        "DOTS"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "fast_los_acceleration",
+        "cannot_kill_in_hiding_spots"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 28
+    },
+    {
+      "id": "kormos",
+      "name": "Kormos",
+      "nameTranslations": {},
+      "description": "Nearly blind and hunts by sound instead of sight, reacting to footsteps from far away.",
+      "descriptionTranslations": {},
+      "evidence": [
+        "GHOST_ORB",
+        "SPIRIT_BOX",
+        "UV"
+      ],
+      "extraEvidence": [],
+      "behaviors": [
+        "hunts_by_sound_not_sight",
+        "detects_sprinting_from_far",
+        "raised_hunt_threshold_if_sprint_detected"
+      ],
+      "dangerLevel": "MEDIUM",
+      "order": 29
+    }
+  ],
+  "behaviors": [
+    {
+      "id": "activity_in_multiple_places_at_once",
+      "label": "Activity occurs in two or more places at the same time.",
+      "labelTranslations": {
+        "de": "Aktivität findet gleichzeitig an mehreren Orten statt.",
+        "es": "Actividad en múltiples lugares al mismo tiempo.",
+        "fr": "Activité simultanée à plusieurs endroits.",
+        "it": "Attività in più luoghi contemporaneamente."
+      },
+      "weight": 26
+    },
+    {
+      "id": "avoids_salt",
+      "label": "Avoids stepping in salt and never leaves salt footprints.",
+      "labelTranslations": {
+        "de": "Meidet Salz und hinterlässt keine Fußspuren.",
+        "es": "Evita la sal y no deja huellas.",
+        "fr": "Évite le sel et ne laisse pas d’empreintes.",
+        "it": "Evita il sale e non lascia impronte."
+      },
+      "weight": 34
+    },
+    {
+      "id": "calm_when_player_in_room",
+      "label": "Less active when players are inside its ghost room.",
+      "labelTranslations": {
+        "de": "Weniger aktiv, wenn Spieler im Geisterraum sind.",
+        "es": "Menos activo cuando hay jugadores en la habitación.",
+        "fr": "Moins actif lorsque les joueurs sont dans la pièce.",
+        "it": "Meno attivo quando i giocatori sono nella stanza."
+      },
+      "weight": 14
+    },
+    {
+      "id": "calm_then_aggressive_cycles",
+      "label": "Hunts alternate between fast and slow depending on aggression.",
+      "labelTranslations": {
+        "de": "Hunts alternate between fast and slow depending on aggression.",
+        "es": "Hunts alternate between fast and slow depending on aggression.",
+        "fr": "Hunts alternate between fast and slow depending on aggression.",
+        "it": "Hunts alternate between fast and slow depending on aggression."
+      },
+      "weight": 14
+    },
+    {
+      "id": "cannot_hide_from_ghost",
+      "label": "The ghost always knows the player’s location; cannot be hidden from.",
+      "labelTranslations": {
+        "de": "Der Geist kennt immer deine Position; Verstecken ist unmöglich.",
+        "es": "El fantasma siempre conoce tu ubicación.",
+        "fr": "Le fantôme connaît toujours votre position.",
+        "it": "Il fantasma conosce sempre la tua posizione."
+      },
+      "weight": 42
+    },
+    {
+      "id": "cannot_mist_form",
+      "label": "Does not produce ghost mist events.",
+      "labelTranslations": {
+        "de": "Erzeugt keine Nebelerscheinungen.",
+        "es": "No produce apariciones de niebla.",
+        "fr": "Ne produit pas d’apparitions brumeuses.",
+        "it": "Non produce apparizioni di nebbia."
+      },
+      "weight": 26
+    },
+    {
+      "id": "dots_only_visible_through_camera",
+      "label": "DOTS ghost movements are visible on camera only.",
+      "labelTranslations": {
+        "de": "D.O.T.S.-Bewegungen sind nur durch Kameras sichtbar.",
+        "es": "Los movimientos D.O.T.S. solo son visibles por cámara.",
+        "fr": "Les mouvements D.O.T.S. sont visibles uniquement via caméra.",
+        "it": "I movimenti D.O.T.S. sono visibili solo tramite telecamera."
+      },
+      "weight": 42
+    },
+    {
+      "id": "early_hunter",
+      "label": "Able to hunt at higher-than-normal sanity levels.",
+      "labelTranslations": {
+        "de": "Kann bei höherem Verstand jagen als üblich.",
+        "es": "Puede cazar con cordura alta.",
+        "fr": "Peut chasser à un niveau de santé mentale élevé.",
+        "it": "Può cacciare con sanità mentale elevata."
+      },
+      "weight": 20
+    },
+    {
+      "id": "extinguished_flame_causes_hunt",
+      "label": "Extinguishing flames increases chance of an immediate hunt.",
+      "labelTranslations": {
+        "de": "Das Löschen von Flammen erhöht die Jagdwahrscheinlichkeit.",
+        "es": "Apagar llamas aumenta la probabilidad de caza.",
+        "fr": "Éteindre une flamme augmente les chances de chasse.",
+        "it": "Spegnere una fiamma aumenta la probabilità di caccia."
+      },
+      "weight": 34
+    },
+    {
+      "id": "fast_blink",
+      "label": "Blinks very quickly during hunts.",
+      "labelTranslations": {
+        "de": "Blinkt während der Jagd sehr schnell.",
+        "es": "Parpadea muy rápido durante la caza.",
+        "fr": "Clignote très rapidement pendant la chasse.",
+        "it": "Lampeggia molto velocemente durante la caccia."
+      },
+      "weight": 14
+    },
+    {
+      "id": "fast_hunt",
+      "label": "Moves significantly faster than normal during hunts.",
+      "labelTranslations": {
+        "de": "Bewegt sich während der Jagd deutlich schneller als normal.",
+        "es": "Se mueve mucho más rápido durante la caza.",
+        "fr": "Se déplace beaucoup plus vite pendant la chasse.",
+        "it": "Si muove molto più velocemente durante la caccia."
+      },
+      "weight": 20
+    },
+    {
+      "id": "faster_near_electronics",
+      "label": "Increases speed when near active electronics.",
+      "labelTranslations": {
+        "de": "Wird schneller in der Nähe aktiver Elektronik.",
+        "es": "Acelera cerca de dispositivos electrónicos activos.",
+        "fr": "Accélère près des appareils électroniques actifs.",
+        "it": "Accelera vicino a dispositivi elettronici attivi."
+      },
+      "weight": 30
+    },
+    {
+      "id": "hard_to_hear_hunting",
+      "label": "Hunt footsteps or vocals are unusually quiet or muffled.",
+      "labelTranslations": {
+        "de": "Jagdfußschritte oder Geräusche sind ungewöhnlich leise.",
+        "es": "Los sonidos de caza son difíciles de oír.",
+        "fr": "Pas de sons de pas clairement audibles.",
+        "it": "I suoni della caccia sono difficili da sentire."
+      },
+      "weight": 26
+    },
+    {
+      "id": "handprint_has_six_fingers",
+      "label": "UV fingerprint sometimes has six fingers instead of five.",
+      "labelTranslations": {
+        "de": "UV-Fingerabdruck hat manchmal sechs Finger.",
+        "es": "La huella UV a a veces seis dedos en lugar de cinco.",
+        "fr": "L’empreinte UV a parfois six doigts au lieu de cinq.",
+        "it": "L’impronta UV a volte mostra sei dita invece di cinque."
+      },
+      "weight": 42
+    },
+    {
+      "id": "hunt_movement_speed_decreases_over_time",
+      "label": "Slows down compared to each previous hunt.",
+      "labelTranslations": {
+        "de": "Wird mit jeder Jagd langsamer.",
+        "es": "Se vuelve más lento con cada caza.",
+        "fr": "Ralentit à chaque chasse successive.",
+        "it": "Diventa più lento a ogni caccia."
+      },
+      "weight": 30
+    },
+    {
+      "id": "hunts_when_you_talk",
+      "label": "More likely to hunt when players speak nearby.",
+      "labelTranslations": {
+        "de": "Jagt häufiger, wenn Spieler sprechen.",
+        "es": "Caza con más frecuencia cuando los jugadores hablan.",
+        "fr": "Chasse plus souvent lorsque les joueurs parlent.",
+        "it": "Caccia più spesso quando i giocatori parlano."
+      },
+      "weight": 20
+    },
+    {
+      "id": "late_hunter",
+      "label": "Prefers to hunt only at very low sanity.",
+      "labelTranslations": {
+        "de": "Jagt bevorzugt erst bei sehr niedrigem Verstand.",
+        "es": "Prefiere cazar con cordura muy baja.",
+        "fr": "Préfère chasser à une santé mentale très basse.",
+        "it": "Preferisce cacciare con sanità mentale molto bassa."
+      },
+      "weight": 20
+    },
+    {
+      "id": "line_of_sight_speed_up",
+      "label": "Speeds up when maintaining line of sight with a player.",
+      "labelTranslations": {
+        "de": "Beschleunigt bei direkter Sichtlinie.",
+        "es": "Acelera con línea de visión directa.",
+        "fr": "Accélère en ligne de vue directe.",
+        "it": "Accelera con linea di vista diretta."
+      },
+      "weight": 20
+    },
+    {
+      "id": "moves_faster_when_player_moves_nearby",
+      "label": "The ghost hunts faster if you move within 10 meters and slower if you remain still.",
+      "labelTranslations": {
+        "de": "Der Geist wird schneller, wenn du dich bewegst, langsamer wenn du stillstehst.",
+        "es": "El fantasma caza más rápido si te mueves dentro de 10 metros y más lento si permaneces quieto.",
+        "fr": "Le fantôme chasse plus vite si vous bougez dans un rayon de 10 mètres, et plus lentement si vous restez immobile.",
+        "it": "Il fantasma caccia più velocemente se ti muovi entro 10 metri e più lentamente se resti fermo."
+      },
+      "weight": 30
+    },
+    {
+      "id": "protective_equipment_better_as_ghost_weakens",
+      "label": "More affected by protective equipment as it weakens.",
+      "labelTranslations": {
+        "de": "Wird stärker durch Schutzmittel beeinflusst, wenn er schwächer wird.",
+        "es": "Se ve más afectado por el equipo de protección a medida que se debilita.",
+        "fr": "Plus affecté par l’équipement de protection à mesure qu’il s’affaiblit.",
+        "it": "È più influenzato dall’attrezzatura protettiva man mano che si indebolisce."
+      },
+      "weight": 14
+    },
+    {
+      "id": "roamer",
+      "label": "Frequently roams away from its ghost room.",
+      "labelTranslations": {
+        "de": "Entfernt sich häufig vom Geisterraum.",
+        "es": "Se aleja frecuentemente de su habitación.",
+        "fr": "S’éloigne fréquemment de sa pièce.",
+        "it": "Si allontana spesso dalla sua stanza."
+      },
+      "weight": 14
+    },
+    {
+      "id": "sanity_drain_strong",
+      "label": "Causes above-average sanity drain during interactions.",
+      "labelTranslations": {
+        "de": "Verursacht überdurchschnittlichen Verstandsverlust.",
+        "es": "Drena cordura por encima de lo normal.",
+        "fr": "Drain de santé mentale supérieur à la normale.",
+        "it": "Consumo di sanità mentale superiore alla norma."
+      },
+      "weight": 14
+    },
+    {
+      "id": "sanity_drain_weak",
+      "label": "Causes below-average sanity drain.",
+      "labelTranslations": {
+        "de": "Verursacht unterdurchschnittlichen Verstandsverlust.",
+        "es": "Drena cordura por debajo de lo normal.",
+        "fr": "Drain de santé mentale inférieur à la normale.",
+        "it": "Consumo di sanità mentale inferiore alla norma."
+      },
+      "weight": 14
+    },
+    {
+      "id": "screams_in_audio_or_parabolic",
+      "label": "Produces a distinctive scream on audio or parabolic microphone.",
+      "labelTranslations": {
+        "de": "Erzeugt einen charakteristischen Schrei auf Audio-/Parabolmikrofon.",
+        "es": "Produce un grito distintivo en micrófono.",
+        "fr": "Cri distinct sur micro audio ou parabolique.",
+        "it": "Produce un urlo distintivo su microfono audio o parabolico."
+      },
+      "weight": 34
+    },
+    {
+      "id": "selectively_steps_in_salt",
+      "label": "May walk over salt without disturbing it, then later disturb it.",
+      "labelTranslations": {
+        "de": "Ignoriert Salz gelegentlich und löst es später aus.",
+        "es": "Puede caminar sobre la sal sin alterarla y luego alterarla más tarde.",
+        "fr": "Peut marcher sur le sel sans le perturber, puis le perturber plus tard.",
+        "it": "Può camminare sul sale senza disturbarlo e poi disturbarlo in seguito."
+      },
+      "weight": 34
+    },
+    {
+      "id": "shapeshifter",
+      "label": "Alters appearance; may blink a different form while hunting.",
+      "labelTranslations": {
+        "de": "Verändert sein Aussehen während der Jagd.",
+        "es": "Cambia de forma durante la caza.",
+        "fr": "Change d’apparence pendant la chasse.",
+        "it": "Cambia aspetto durante la caccia."
+      },
+      "weight": 26
+    },
+    {
+      "id": "shy",
+      "label": "Reduces interactions or manifestations when players are nearby.",
+      "labelTranslations": {
+        "de": "Zeigt weniger Aktivität, wenn Spieler in der Nähe sind.",
+        "es": "Menos activo cuando los jugadores están cerca.",
+        "fr": "Moins actif lorsque les joueurs sont proches.",
+        "it": "Meno attivo quando i giocatori sono vicini."
+      },
+      "weight": 14
+    },
+    {
+      "id": "slow_blink",
+      "label": "Blinks slowly or less frequently during hunts.",
+      "labelTranslations": {
+        "de": "Blinkt langsam oder selten während der Jagd.",
+        "es": "Parpadea lentamente o rara vez.",
+        "fr": "Clignote lentement ou rarement.",
+        "it": "Lampeggia lentamente o raramente."
+      },
+      "weight": 14
+    },
+    {
+      "id": "slow_hunt",
+      "label": "Moves noticeably slower than normal during hunts.",
+      "labelTranslations": {
+        "de": "Bewegt sich während der Jagd langsamer als normal.",
+        "es": "Se mueve lentamente durante la caza.",
+        "fr": "Se déplace lentement pendant la chasse.",
+        "it": "Si muove lentamente durante la caccia."
+      },
+      "weight": 20
+    },
+    {
+      "id": "slow_when_hidden_fast_when_visible",
+      "label": "Slow when the player is hidden, fast when it has visual contact.",
+      "labelTranslations": {
+        "de": "Langsam bei versteckten Spielern, schnell bei Sichtkontakt.",
+        "es": "Lento al esconderse, rápido al verse.",
+        "fr": "Lent si caché, rapide en visibilité directe.",
+        "it": "Lento quando nascosto, veloce quando visibile."
+      },
+      "weight": 30
+    },
+    {
+      "id": "slows_down_as_it_approaches_player",
+      "label": "Speed decreases as it closes distance to the player.",
+      "labelTranslations": {
+        "de": "Wird langsamer, je näher er dem Spieler kommt.",
+        "es": "Se ralentiza al acercarse al jugador.",
+        "fr": "Ralentit en s’approchant du joueur.",
+        "it": "Rallenta avvicinandosi al giocatore."
+      },
+      "weight": 30
+    },
+    {
+      "id": "throws_piles_or_multiple_at_once",
+      "label": "Throws multiple objects rapidly or throws piles of items.",
+      "labelTranslations": {
+        "de": "Wirft mehrere Gegenstände schnell hintereinander.",
+        "es": "Lanza múltiples objetos rápidamente.",
+        "fr": "Lance plusieurs objets rapidement.",
+        "it": "Lancia più oggetti rapidamente."
+      },
+      "weight": 26
+    },
+    {
+      "id": "visible_breath",
+      "label": "Visible breath from the ghost.",
+      "labelTranslations": {
+        "de": "Sichtbarer Atem des Geistes.",
+        "es": "Respiración visible del fantasma.",
+        "fr": "Souffle visible du fantôme.",
+        "it": "Respiro del fantasma visibile."
+      },
+      "weight": 34
+    },
+    {
+      "id": "protective_equipment_enrages",
+      "label": "Becomes faster when protective equipment is used.",
+      "labelTranslations": {
+        "de": "Wird aggressiver, wenn Schutzgegenstände benutzt werden.",
+        "es": "Se vuelve más rápido cuando se usa equipo de protección.",
+        "fr": "Devient plus rapide lorsque de l’équipement de protection est utilisé.",
+        "it": "Diventa più veloce quando viene usata attrezzatura protettiva."
+      },
+      "weight": 14
+    },
+    {
+      "id": "disappears_from_photos",
+      "label": "Temporarily disappears from photos and video footage when captured on camera.",
+      "labelTranslations": {},
+      "weight": 42
+    },
+    {
+      "id": "locks_onto_one_player",
+      "label": "Locks onto a single player for the entire investigation and cannot kill anyone else during a hunt.",
+      "labelTranslations": {},
+      "weight": 42
+    },
+    {
+      "id": "instantly_toggles_lights_off",
+      "label": "Can instantly turn a light back off moments after a player switches it on.",
+      "labelTranslations": {},
+      "weight": 34
+    },
+    {
+      "id": "closes_doors_silently",
+      "label": "Can close a door smoothly and silently, without the usual creak or slam.",
+      "labelTranslations": {},
+      "weight": 34
+    },
+    {
+      "id": "teleports_between_hunts",
+      "label": "Can teleport next to a random player between hunts, sometimes leaving a stray EMF reading behind.",
+      "labelTranslations": {},
+      "weight": 42
+    },
+    {
+      "id": "sometimes_leaves_no_fingerprint",
+      "label": "Sometimes leaves no UV fingerprint at all on a surface it touches.",
+      "labelTranslations": {},
+      "weight": 30
+    },
+    {
+      "id": "mimics_other_ghost",
+      "label": "Temporarily copies another ghost type's hunting speed and abilities.",
+      "labelTranslations": {},
+      "weight": 42
+    },
+    {
+      "id": "random_fixed_hunt_speed",
+      "label": "Settles into one of two fixed hunting speeds at random each hunt, rather than a single consistent speed.",
+      "labelTranslations": {},
+      "weight": 26
+    },
+    {
+      "id": "wider_electronic_disruption_range",
+      "label": "Disrupts electronics and reveals a player's heartbeat from farther away than a normal ghost.",
+      "labelTranslations": {},
+      "weight": 26
+    },
+    {
+      "id": "drains_sanity_near_fuse_box",
+      "label": "Occasionally drains extra sanity from a nearby player while the fuse box is switched on.",
+      "labelTranslations": {},
+      "weight": 26
+    },
+    {
+      "id": "more_active_near_players",
+      "label": "Becomes more active, not less, when players are nearby.",
+      "labelTranslations": {},
+      "weight": 26
+    },
+    {
+      "id": "produces_sounds_more_often",
+      "label": "Produces paranormal sounds more frequently than a typical ghost.",
+      "labelTranslations": {},
+      "weight": 20
+    },
+    {
+      "id": "cannot_wander_far_from_room",
+      "label": "Rarely wanders far from its own room and never changes its favorite room.",
+      "labelTranslations": {},
+      "weight": 20
+    },
+    {
+      "id": "fixed_fast_hunt_no_los_acceleration",
+      "label": "Starts hunts at a high, fixed speed that does not accelerate further from sustained line of sight.",
+      "labelTranslations": {},
+      "weight": 30
+    },
+    {
+      "id": "slows_with_object_interactions",
+      "label": "Permanently slows down the more items are moved or interacted with during the investigation, eventually crawling at a fraction of its starting speed.",
+      "labelTranslations": {},
+      "weight": 42
+    },
+    {
+      "id": "rarely_interacts_with_doors_switches",
+      "label": "Less likely than a typical ghost to interact with doors or light switches.",
+      "labelTranslations": {},
+      "weight": 14
+    },
+    {
+      "id": "fast_los_acceleration",
+      "label": "Reaches full hunting speed from line of sight much faster than a typical ghost.",
+      "labelTranslations": {},
+      "weight": 30
+    },
+    {
+      "id": "cannot_kill_in_hiding_spots",
+      "label": "Cannot kill a player sheltering inside an official hiding spot -- the hunt simply ends instead.",
+      "labelTranslations": {},
+      "weight": 42
+    },
+    {
+      "id": "hunts_by_sound_not_sight",
+      "label": "Hunts almost blind, relying on footstep sound rather than line of sight to find players.",
+      "labelTranslations": {},
+      "weight": 42
+    },
+    {
+      "id": "detects_sprinting_from_far",
+      "label": "Can detect a sprinting player from much farther away than a typical ghost detects footsteps.",
+      "labelTranslations": {},
+      "weight": 30
+    },
+    {
+      "id": "raised_hunt_threshold_if_sprint_detected",
+      "label": "Hunts at a higher sanity threshold if it detects a player sprinting nearby before the hunt begins.",
+      "labelTranslations": {},
+      "weight": 26
+    }
+  ]
+}

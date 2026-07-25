@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "726376465059",
+    "project_id": "phasmofriend",
+    "storage_bucket": "phasmofriend.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726376465059:android:6202e2341be4d878c9b516",
+        "android_client_info": {
+          "package_name": "com.phasmofriend.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrXOqb-uYOdOGNL3cvKgHlTwWNbL1HkH4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
