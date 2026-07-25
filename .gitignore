@@ -15,3 +15,7 @@
 .cxx
 /app/secrets.properties
 local.properties
+/Console Screenshots/behavior_screen.png
+/Console Screenshots/clear_all_dialogue.png
+/Console Screenshots/evidence_screen.png
+/Console Screenshots/results_screen.png
